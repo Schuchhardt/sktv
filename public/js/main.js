@@ -14,10 +14,10 @@ $(window)['load'](function() {
         $('header .countdown')['addClass']('animated fadeInUp')
     })
 });
-$('header')['backstretch']('images/slides/background1.jpg');
+$('header')['backstretch']('images/video.gif');
 
 $(function() {
-    var _0x13c8x2 = 'Nov 31, 2017 20:39:00';
+    var _0x13c8x2 = 'Nov 15, 2017 20:39:00';
     $('.countdown')['countdown']({
         date: _0x13c8x2,
         render: function(_0x13c8x3) {
