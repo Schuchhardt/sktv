@@ -1,0 +1,26 @@
+#galeria{
+    background-color: $white;
+    padding: 20px 10%;
+
+    .col{
+        padding: 30px;
+    }
+    img{
+        width: 100%;
+    }
+    p{
+        text-align: center; 
+        margin-top: 10px;
+    }
+    .name{
+        font-size: 17px;
+        font-size: 30px;
+    }
+
+    .date{
+        font-size: 30px;
+        margin: 0;
+        position: relative;
+        bottom: 7px;
+    }
+}

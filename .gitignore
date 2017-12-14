@@ -1,0 +1,5 @@
+.DS_Store
+build
+bower_components
+node_modules
+concurso_sktv
