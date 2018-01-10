@@ -1,7 +1,7 @@
 require('./vendor')();
 
 angular.module('SKTV', [
-  'ngSanitize',
+  // 'ngSanitize',
   'ui.router',
   'ui.bootstrap',
   'ui.select',

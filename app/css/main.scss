@@ -41,9 +41,11 @@ $xl-screen: 1540px;
 
 @import "fonts";
 @import "layout";
+@import "novedades";
 @import "home";
 @import "galeria";
 @import "mapa";
+@import "agentes";
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
@@ -59,7 +61,6 @@ $xl-screen: 1540px;
 body{
     background-color: $black;
 }
-
 
 .white{
 	color: $white;
@@ -112,24 +113,12 @@ body{
   }
 }
 
-
 .chinese{
     font-family: 'Barlow Condensed', sans-serif;
 }
 
 .indie{
     font-family: 'Amatic SC', cursive;
-}
-
-.book{
-    font-family: "novecento_sans_widelight";
-    strong{
-        font-family: "novecento_sans_widedemibold";
-    }
-}
-
-.demibold{
-    font-family: "novecento_sans_widedemibold";
 }
 
 video{

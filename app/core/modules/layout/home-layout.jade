@@ -6,36 +6,40 @@ div(id="layout" ng-init="showNavbar = false")
 			.logo(ui-sref="home")
 				img(src="images/sktv/logo.png")
 		.col.col-lg-4.col-md-4.col-xs-4
-			a.hidden-xs.fb-link( href="https://www.facebook.com/sktv" target="_system")
-				.fb-logo
-			button.menu-logo.hidden-sm.hidden-md.hidden-lg(ng-click="showNavbar = !showNavbar")
+			.social-media-icons
+				a( href="https://www.facebook.com/sktvchile" target="_system")
+					span.icon-facebook
+				a( href="https://www.youtube.com/user/sktvchile/featured" target="_system")
+					span.icon-youtube
+				a( href="https://www.instagram.com/sktvchile/" target="_system")
+					span.icon-instagram
 	nav.navbar.navbar-fixed-top.appear(ng-show="showNavbar").hidden-sm.hidden-md.hidden-lg
 		.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
 			ul.nav.navbar-nav
 				li(ui-sref-active="active")
-					a(ui-sref="home") Inicio
+					a(ui-sref="home") INICIO
 				li(ui-sref-active="active")
-					a(ui-sref="noticias") Archivo
+					a(ui-sref="novedades") NOVEDADES
 				li(ui-sref-active="active")
-					a(ui-sref="galeria") Galeria
+					a(ui-sref="galeria") GALERIA
 				li(ui-sref-active="active")
-					a(ui-sref="agentes") Agentes
+					a(ui-sref="agentes") AGENTES
 				li(ui-sref-active="active")
-					a(ui-sref="mapa") Mapa
+					a(ui-sref="mapa") MAPA
 	nav.navbar.navbar-fixed-top.appear.hidden-xs.absolute
 		.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2
 			ul.nav.navbar-nav
 				li(ui-sref-active="active")
-					a(ui-sref="home") Inicio
+					a(ui-sref="home") INICIO
 				li(ui-sref-active="active")
-					a(ui-sref="noticias") Archivo
+					a(ui-sref="novedades") NOVEDADES
 				li(ui-sref-active="active")
-					a(ui-sref="galeria") Galeria
+					a(ui-sref="galeria") GALERIA
 				li(ui-sref-active="active")
-					a(ui-sref="agentes") Agentes
+					a(ui-sref="agentes") AGENTES
 				li(ui-sref-active="active")
-					a(ui-sref="mapa") Mapa
+					a(ui-sref="mapa") MAPA
 	.container-content
 		block content
 		.footer(class="{{$parent.currentState}}-page")
-			p.margin-0.white.book.uppercased.text-center.chinese SKTV &copy; 2017
+			p.margin-0.white.book.uppercased.text-center SKTV &copy; 2017

@@ -6,20 +6,15 @@ export default [ "$stateProvider", "$urlRouterProvider", ($stateProvider, $urlRo
       controller: 'HomeCtrl',
       template: require('../modules/home/home.jade'),
     })
-    .state('noticias', {
-      url: '/noticias',
+    .state('novedades', {
+      url: '/novedades',
       controller: 'HomeCtrl',
-      template: require('../modules/home/noticias.jade'),
+      template: require('../modules/home/novedades.jade'),
     })
     .state('galeria', {
       url: '/galeria',
-      controller: 'HomeCtrl',
-      template: require('../modules/home/galeria.jade'),
-    })
-    .state('videoteca', {
-      url: '/videoteca',
-      controller: 'HomeCtrl',
-      template: require('../modules/home/videoteca.jade'),
+      controller: 'GaleriaCtrl',
+      template: require('../modules/galeria/galeria.jade'),
     })
     .state('agentes', {
       url: '/agentes',

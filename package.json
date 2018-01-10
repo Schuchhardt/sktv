@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --content-base app --hot",
-    "build": "NODE_ENV=production webpack -p --config webpack.production.config.js"
+    "build": "NODE_ENV=production webpack -p --config webpack.production.config.js && cp app/index.html build/index.html && cp -r app/images/* build/images"
   },
   "author": "Sebastian Sch.",
   "license": "MIT",
@@ -40,7 +40,7 @@
     "angular-cookies": "^1.4.5",
     "angular-file-saver": "~0.3.0",
     "angular-i18n": "^1.4.5",
-    "angular-sanitize": "^1.4.9",
+    "angular-sanitize": "1.6.3",
     "angular-ui-bootstrap": "^1.1.4",
     "angular-ui-router": "^0.2.15",
     "angular-ui-select": "^0.12.100",

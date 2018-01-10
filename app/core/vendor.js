@@ -15,7 +15,7 @@ module.exports = function() {
   // require('angular-touch');
   // require('angular-carousel');
   // require('angular-scroll');
-  require('angular-sanitize');
+  // require('angular-sanitize');
   require('angular-ui-router');
   require('angular-ui-bootstrap');
   require('angular-ui-select/select.min.js');

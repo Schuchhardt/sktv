@@ -8,11 +8,18 @@
         background-image: url("../images/sktv/bg.gif");
         background-size: cover;
         background-repeat: no-repeat;
+        width: 104%;
+        margin-left: 0%;
+        margin-left: -2%;
         .featured-container{
             background: #ffffff61;
             margin-top: 100px;
             height: 300px;
+            .col{
+                margin-top: 25px;
+            }
             img{
+                height: 130%;
                 border: 5px solid white;
                 width: 100%;
                 display: block;
@@ -22,6 +29,57 @@
                 position: relative;
                 top: -20px;
                 padding: 10px;
+                h3{
+                    margin: 0;
+                    font-size: 20px;
+                }
+                h2{
+                    margin: 0;
+                }
+            }
+        }
+   }
+   .instagram-feed{
+        background-color: $white;
+        img{
+            display: block;
+            width: 100%;
+            padding: 40px;
+            height: 100%;
+        }
+   }
+   .last-news{
+        background-color: $white;
+        .col{
+            padding: 0;
+        }
+        .img{
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+        }
+        .hover-text{
+            position: absolute;
+            background: $white;
+            height: 20%;
+            margin-top: 50%;
+            width: 100%;
+            opacity: 0.8;
+            transition: all 0.5s linear;
+            top: 50px;
+            &:hover{
+                // height: 100%;
+                // margin-top: 0%;
+                opacity: 0.7;
+                // p{
+                //     top: 120px;
+                // }
+            }
+            p{
+                text-align: center;
+                position: relative;
+                top: 20px;
+                font-size: 25px;
             }
         }
    }
