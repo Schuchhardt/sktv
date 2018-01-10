@@ -16,6 +16,11 @@ export default [ "$stateProvider", "$urlRouterProvider", ($stateProvider, $urlRo
       controller: 'GaleriaCtrl',
       template: require('../modules/galeria/galeria.jade'),
     })
+    .state('detalle-galeria', {
+      url: '/galeria/:galleryId',
+      controller: 'GaleriaCtrl',
+      template: require('../modules/galeria/detalle.jade'),
+    })
     .state('agentes', {
       url: '/agentes',
       controller: 'HomeCtrl',
