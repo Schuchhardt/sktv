@@ -10,13 +10,13 @@ block content
 		br
 		.row
 			h1.indie {{currentEvent.name}}
-			h3.indie 
-				small {{currentEvent.description}}
-			h2.indie 
-				small {{currentEvent.release_date | date: "dd/MM/yyyy"}}
+			h3.indie {{currentEvent.description}}
+			h2.indie {{currentEvent.release_date | date: "dd/MM/yyyy"}}
 		.row.container-fixed
-			.col.col-md-3.clickable(ng-repeat="photo in currentEvent.all_photos" ng-click="openPhoto(photo)")
+			.col.col-md-3.clickable(ng-repeat="photo in currentEvent.all_photos" ng-click="showSlider(photo)")
 				.img(back-img="{{photo.photo_url}}")
 		.row
 			.main-banner
-
+		.row
+			script(type="text/ng-template", id="sliderPhotos")
+				include ./slider-photos

@@ -1,11 +1,12 @@
 require('./vendor')();
 
 angular.module('SKTV', [
-  // 'ngSanitize',
+  'ngTouch',
   'ui.router',
   'ui.bootstrap',
   'ui.select',
   "oitozero.ngSweetAlert",
+  'angular-carousel',
   require('./config').name,
   require('./controllers').name,
   require('./directives').name,

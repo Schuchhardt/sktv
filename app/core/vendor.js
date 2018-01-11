@@ -12,8 +12,8 @@ module.exports = function() {
   require('angular');
   require('angular-i18n/angular-locale_es-cl.js');
   // require('angular-cookies');
-  // require('angular-touch');
-  // require('angular-carousel');
+  require('angular-touch');
+  require('angular-carousel');
   // require('angular-scroll');
   // require('angular-sanitize');
   require('angular-ui-router');
