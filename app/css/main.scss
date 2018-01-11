@@ -80,6 +80,14 @@ body{
         display: block;
         margin: auto;
     }
+    @media(max-width: 420px){
+        img{
+            position: relative;
+            width: 50px !important;
+            top: -10px !important;
+            right: 20px !important;
+        }
+    }
     @media(min-width: $iphone){
         margin-top: 15px;
         img{
