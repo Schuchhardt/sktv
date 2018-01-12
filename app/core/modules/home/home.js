@@ -1,14 +1,18 @@
 export default class HomeCtrl {
   /* @ngInject */
-  constructor($scope, $state, $rootScope, apiService) {
+  constructor($scope, $state, $rootScope, apiService, $sce) {
     $rootScope.currentState = $state.current.name;
 
-    const loadInstagramFeed = () => {
-      apiService.loadInstagramFeed().then((response) => {
-        $scope.instagram_feed = response.instagram_feed;
+    const loadRecentNews = () => {
+      apiService.loadRecentNews().then((response) => {
+        $scope.recent_news = response.recent_news;
+        $scope.featured = response.featured;
+        apiService.loadInstagramEmbed(response.instagram_feed).then( (res) => {
+          $scope.instagram_feed = $sce.trustAsHtml(res.html);
+        });
       });
     };
 
-    loadInstagramFeed();
+    loadRecentNews();
   }
 }

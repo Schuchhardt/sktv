@@ -2,6 +2,7 @@ export default ["$http",
   ($http) => {
     const CONFIG = {
       apiURL: (window.location.hostname === "localhost") ? 'http://localhost:8080/api' : "https://sktv-api.herokuapp.com/api",
+      instagramEmbed: 'https://api.instagram.com/oembed?url=http://instagr.am/p/'
     };
     const service = {
       loadMainGallery: () => {
@@ -20,10 +21,26 @@ export default ["$http",
           return response.data;
         });
       },
-      loadInstagramFeed: () =>{
+      loadInstagramFeed: () => {
         return $http({
           method: 'GET',
           url: CONFIG.apiURL + '/feed/'
+        }).then(function(response) {
+          return response.data;
+        });
+      },
+      loadRecentNews: () => {
+        return $http({
+          method: 'GET',
+          url: CONFIG.apiURL + '/recent_news'
+        }).then(function(response) {
+          return response.data;
+        });
+      },
+      loadInstagramEmbed: (mediaId) => {
+        return $http({
+          method: 'GET',
+          url: CONFIG.instagramEmbed + mediaId
         }).then(function(response) {
           return response.data;
         });

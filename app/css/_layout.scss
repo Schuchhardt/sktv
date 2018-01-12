@@ -176,14 +176,23 @@ iframe{
 
 
 .footer{
+    background: black;
+    height: 80px;
+    margin: 0;
     position: fixed;
     bottom: 0;
     text-align: center;
     width: 100%;
-    margin-bottom: 30px;
+    .social-media-icons{
+        position: absolute;
+        bottom: 12px;
+        top: 42px;
+        right: 44.9%;
+    }
     p{
         font-family: 'Fjalla One';
         font-size: 20px;
+        margin-top: 15px;
     }
 }
 
@@ -203,7 +212,7 @@ iframe{
 }
 
 .main-banner{
-    height: 120px;
+    height: 100px;
     background: lightgray;
     margin: 10px 10%;
     border-radius: 5px;
