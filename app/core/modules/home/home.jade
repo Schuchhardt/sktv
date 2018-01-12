@@ -10,18 +10,14 @@ block content
 						h2.chinese Anibal Wilson
 			.last-news
 				.row
-					.col.col-md-4
+					.col.col-md-6
 						.hover-text
 							p.chinese Entrevista con Don SkateTV
 						.img(style="background-image: url('images/home/1.jpg')")
-					.col.col-md-4
+					.col.col-md-6
 						.hover-text
 							p.chinese Entrevista con Don SkateTV
 						.img(style="background-image: url('images/home/2.jpg')")
-					.col.col-md-4
-						.hover-text
-							p.chinese Entrevista con Don SkateTV
-						.img(style="background-image: url('images/home/3.jpg')")
 				//- .row
 				//- 	.col.col-md-4
 				//- 		.hover-text
@@ -37,7 +33,12 @@ block content
 				//- 		.img(style="background-image: url('images/home/1.jpg')")
 			.instagram-feed
 				.row
-					.col.col-md-6(ng-repeat="feed in instagram_feed" ng-class="{'odd': $odd}")
+					.col.col-md-4(ng-repeat="feed in instagram_feed")
 						.img(back-img="{{feed.image}}")
-						p.indie {{feed.caption}}
+						.img-cover
+							span.heart
+								small.chinese {{feed.likes}}
+							span.comment
+								small.chinese {{feed.comments}}
+						a(ng-href="{{feed.link}}" target="_blank")
 							
