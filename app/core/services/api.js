@@ -20,6 +20,14 @@ export default ["$http",
           return response.data;
         });
       },
+      loadInstagramFeed: () =>{
+        return $http({
+          method: 'GET',
+          url: CONFIG.apiURL + '/feed/'
+        }).then(function(response) {
+          return response.data;
+        });
+      }
     };
 
     return service;

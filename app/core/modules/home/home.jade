@@ -22,23 +22,22 @@ block content
 						.hover-text
 							p.chinese Entrevista con Don SkateTV
 						.img(style="background-image: url('images/home/3.jpg')")
-				.row
-					.col.col-md-4
-						.hover-text
-							p.chinese Entrevista con Don SkateTV
-						.img(style="background-image: url('images/home/4.jpg')")
-					.col.col-md-4
-						.hover-text
-							p.chinese Entrevista con Don SkateTV
-						.img(style="background-image: url('images/home/5.jpg')")
-					.col.col-md-4
-						.hover-text
-							p.chinese Entrevista con Don SkateTV
-						.img(style="background-image: url('images/home/1.jpg')")
+				//- .row
+				//- 	.col.col-md-4
+				//- 		.hover-text
+				//- 			p.chinese Entrevista con Don SkateTV
+				//- 		.img(style="background-image: url('images/home/4.jpg')")
+				//- 	.col.col-md-4
+				//- 		.hover-text
+				//- 			p.chinese Entrevista con Don SkateTV
+				//- 		.img(style="background-image: url('images/home/5.jpg')")
+				//- 	.col.col-md-4
+				//- 		.hover-text
+				//- 			p.chinese Entrevista con Don SkateTV
+				//- 		.img(style="background-image: url('images/home/1.jpg')")
 			.instagram-feed
 				.row
-					.col-md-8
-						img(src="images/instagram_sample.jpg")
-					.col-md-2
-						p
+					.col.col-md-6(ng-repeat="feed in instagram_feed" ng-class="{'odd': $odd}")
+						.img(back-img="{{feed.image}}")
+						p.indie {{feed.caption}}
 							
