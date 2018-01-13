@@ -1,29 +1,45 @@
 extends ../layout/home-layout
 block content
-	.container(id="home")
-		.row
+	.container.bg-white(id="home")
+		.row.cemento-bg
 			.main-hero
 				.main-banner
-				.featured-container(ng-if="featured")
+				.featured-container(ng-if="featured" )
 					.col.col-md-6.col-md-offset-3
-						.img(back-img="{{featured.image_url}}")
+						.img(back-img="{{featured.image_url}}" ui-sref="post({postId: featured.id})").clickable
 						.caption
 							.title
 								h2.chinese {{featured.title}}
 								h3.chinese {{featured.subtitle}}
+								.share-links
+									span
+										i.
 							.detail
 								p.chinese {{featured.intro}}
-								a.indie Ver más
+								a.indie(ui-sref="post({postId: featured.id})") Ver más
 
-				.last-news(ng-show="recent_news")
+				.last-news(ng-show="recent_news_1")
 					.row
-						.col.col-md-4(ng-repeat="post in recent_news | orderBy:'-created_at'")
+						.col.col-md-4.clickable(ng-repeat="post in recent_news_1 | orderBy:'-created_at'" ui-sref="post({postId: post.id})")
 							.hover-text
 								p.chinese {{post.title}}
 							.img(back-img="{{post.image_url}}")
+				.row.bg-white
+					.main-banner.below
+				br
+				br
 				.instagram-feed(ng-show="instagram_feed")
 					div.feed-html(ng-bind-html="instagram_feed")
-				//- .row
+				.row.bg-white.m-b-80
+					.main-banner
+				.last-news.bottom(ng-show="recent_news_2")
+					.row
+						.col.col-md-4.clickable(ng-repeat="post in recent_news_2 | orderBy:'-created_at'" ui-sref="post({postId: post.id})")
+							.hover-text
+								p.chinese {{post.title}}
+							.img(back-img="{{post.image_url}}")
+				br
+				br
 				//- 	.col.col-md-4(ng-repeat="feed in instagram_feed")
 				//- 		.img(back-img="{{feed.image}}")
 				//- 		.img-cover

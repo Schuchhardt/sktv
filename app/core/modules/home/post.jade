@@ -1,0 +1,24 @@
+extends ../layout/home-layout
+block content
+	#post
+		.row
+			.main-banner
+		br
+		br
+		br
+		.row
+			h1.indie {{currentPost.title}}
+			h3.indie {{currentPost.subtitle}}
+			h2.indie {{currentPost.release_date | date: "dd/MM/yyyy"}}
+		.row.container-fixed(ng-if="currentPost")
+			.img(back-img="{{currentPost.image_url}}")
+			p {{currentPost.text}}
+			p {{currentPost.second_text}}
+		.row
+			.main-banner
+		.related-posts(ng-show="relatedPosts")
+			.row
+				.col.col-md-4.clickable(ng-repeat="post in relatedPosts | orderBy:'-created_at'" ui-sref="post({postId: post.id})")
+					.hover-text
+						p.chinese {{post.title}}
+					.img(back-img="{{post.image_url}}")

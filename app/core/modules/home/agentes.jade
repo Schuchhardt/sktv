@@ -7,9 +7,9 @@ block content
 			p.chinese Agentes
 		br
 		br
-		.row.container-fixed
-			.col.col-md-12
-				img(src="images/agentes/sample.jpg")
+		.row.container-fixed(ng-if="agents")
+			.col.col-md-12(ng-repeat="agent in agents")
+				img(ng-src="{{agent.photo_url}}")
 				.text-desc
 					p.title.indie
-						| Ver Perfil
+						{{agent.name}}

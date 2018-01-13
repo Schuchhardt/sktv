@@ -12,11 +12,14 @@
         margin-left: 0%;
         margin-left: -2%;
         .main-banner{
-            margin: 10px 25%;
+            margin: 0px 25%;
+            position: relative;
+            top: 20px;
+            height: 120px;
         }
         .featured-container{
-            background: #ffffff61;
-            margin-top: 100px;
+            background: rgba(255, 255, 255, 0.3803921568627451);
+            margin-top: 40px;
             height: 300px;
             .col{
                 border: 1px solid black;
@@ -60,7 +63,8 @@
         }
    }
    .instagram-feed{
-        padding: 30px 15%;
+        margin-top: -40px;
+        padding: 80px 15%;
         background-color: $white;
         .feed-html{
             height: 100%;
@@ -141,6 +145,9 @@
         margin-top: 340px;
         padding: 30 15%;
         background-color: $white;
+        &.bottom{
+            margin-top: 0px;
+        }
         .col{
             padding: 0;
         }
@@ -170,4 +177,12 @@
             }
         }
    }
+}
+
+.m-b-80{
+    padding-bottom: 80px;
+}
+
+.bg-white{
+    background-color: $white;
 }

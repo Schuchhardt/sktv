@@ -6,8 +6,15 @@
     }
     .col{
         padding: 30px;
-        img{
+        border: 1px solid whitesmoke;
+        .img{
+            background-size: contain !important;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 250px;
             width: 50%;
+            display: block;
+            float: right;
         }
         .text-desc{
             max-width: 50%;
@@ -17,5 +24,9 @@
                 font-size: 30px;
             }
         }
+    }
+    .see-more{
+        font-size: 20px;
+        color: blue;
     }
 }

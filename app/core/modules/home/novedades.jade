@@ -7,28 +7,15 @@ block content
 		br
 		br
 		br
-		.row.container-fixed
-			.col.col-md-12
-				img(src="images/noticias/sample.jpeg")
+		.row.container-fixed(ng-if="allPosts")
+			.col.col-md-12.clickable(ng-repeat="post in allPosts" ui-sref="post({postId: post.id})")
+				.img(back-img="{{post.image_url}}")
 				.text-desc
 					p.title.indie
-						| Inauguración Skatepark San Francisco de Mostazal
+						| {{post.title}}
 					p.indie
-						small
-							| Ver más...
-			.col.col-md-12
-				img(src="images/noticias/sample.jpeg")
-				.text-desc
-					p.title.indie
-						| Inauguración Skatepark San Francisco de Mostazal
-					p.indie
-						small
-							| Ver más...
-			.col.col-md-12
-				img(src="images/noticias/sample.jpeg")
-				.text-desc
-					p.title.indie
-						| Inauguración Skatepark San Francisco de Mostazal
-					p.indie
+						| {{post.subtitle}}
+					p {{post.text}}
+					p.indie.see-more
 						small
 							| Ver más...

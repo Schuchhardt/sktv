@@ -21,6 +21,22 @@ export default ["$http",
           return response.data;
         });
       },
+      loadPost: (postId) => {
+        return $http({
+          method: 'GET',
+          url: CONFIG.apiURL + '/posts/' + postId
+        }).then(function(response) {
+          return response.data;
+        });
+      },
+      loadAllPosts: () => {
+        return $http({
+          method: 'GET',
+          url: CONFIG.apiURL + '/posts/'
+        }).then(function(response) {
+          return response.data;
+        });
+      },
       loadInstagramFeed: () => {
         return $http({
           method: 'GET',
@@ -33,6 +49,14 @@ export default ["$http",
         return $http({
           method: 'GET',
           url: CONFIG.apiURL + '/recent_news'
+        }).then(function(response) {
+          return response.data;
+        });
+      },
+      loadAgents: () => {
+        return $http({
+          method: 'GET',
+          url: CONFIG.apiURL + '/agents'
         }).then(function(response) {
           return response.data;
         });

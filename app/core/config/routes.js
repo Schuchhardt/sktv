@@ -8,8 +8,13 @@ export default [ "$stateProvider", "$urlRouterProvider", ($stateProvider, $urlRo
     })
     .state('novedades', {
       url: '/novedades',
-      controller: 'HomeCtrl',
+      controller: 'PostCtrl',
       template: require('../modules/home/novedades.jade'),
+    })
+    .state('post', {
+      url: '/p/:postId',
+      controller: 'PostCtrl',
+      template: require('../modules/home/post.jade'),
     })
     .state('galeria', {
       url: '/galeria',
@@ -23,7 +28,7 @@ export default [ "$stateProvider", "$urlRouterProvider", ($stateProvider, $urlRo
     })
     .state('agentes', {
       url: '/agentes',
-      controller: 'HomeCtrl',
+      controller: 'AgentCtrl',
       template: require('../modules/home/agentes.jade'),
     })
     .state('mapa', {

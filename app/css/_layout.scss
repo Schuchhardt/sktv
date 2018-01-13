@@ -177,7 +177,7 @@ iframe{
 
 .footer{
     background: black;
-    height: 80px;
+    height: 50px;
     margin: 0;
     position: fixed;
     bottom: 0;
@@ -185,14 +185,13 @@ iframe{
     width: 100%;
     .social-media-icons{
         position: absolute;
-        bottom: 12px;
-        top: 42px;
-        right: 44.9%;
+        top: 10px;
+        right: 10px;
     }
     p{
         font-family: 'Fjalla One';
         font-size: 20px;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 }
 
@@ -220,4 +219,15 @@ iframe{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    &.below{
+        background-image: url("https://i.imgur.com/zGxrNFB.png");
+    }
+}
+
+
+.cemento-bg{
+    background-image: url("../images/cemento2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
 }
