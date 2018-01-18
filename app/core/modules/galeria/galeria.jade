@@ -10,27 +10,10 @@ block content
 		br
 		.row.container-fixed
 			.col.col-md-4.clickable(ng-repeat="event in events" ng-click="goToGalleryDetail(event)")
-				//- img(ng-src="{{event.cover_url}}")
 				.img(back-img="{{event.cover_url}}")
 				p.text-right.name.indie {{event.name}}
 				p.date.indie 
 					small {{event.release_date | date:"dd/MM/yyyy"}}
-		//- .row.container-fixed
-		//- 	.col.col-md-4
-		//- 		img(src="images/galeria/1.jpg")
-		//- 		p.text-right.name.indie Rey de Reyes 2017
-		//- 		p.date.indie 
-		//- 			small 02/02/2017
-		//- 	.col.col-md-4
-		//- 		img(src="images/galeria/1.jpg")
-		//- 		p.text-right.name.indie Rey de Reyes 2017
-		//- 		p.date.indie 
-		//- 			small 02/02/2017
-		//- 	.col.col-md-4
-		//- 		img(src="images/galeria/1.jpg")
-		//- 		p.text-right.name.indie Rey de Reyes 2017
-		//- 		p.date.indie 
-		//- 			small 02/02/2017
 		.row
 			.main-banner
 

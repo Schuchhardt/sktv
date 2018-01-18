@@ -13,8 +13,10 @@ block content
 			h3.indie {{currentEvent.description}}
 			h2.indie {{currentEvent.release_date | date: "dd/MM/yyyy"}}
 		.row.container-fixed
-			.col.col-md-3.clickable(ng-repeat="photo in currentEvent.all_photos" ng-click="showSlider(photo)")
+			.col.col-md-3.clickable(ng-repeat="photo in eventPhotos" ng-click="showSlider(photo)")
 				.img(back-img="{{photo.photo_url}}")
+			.col(ng-if="thereIsMorePhotos")
+				button.indie.load-more(ng-click="loadMorePhotos()") Ver más
 		.row
 			.main-banner
 		.row

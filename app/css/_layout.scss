@@ -135,8 +135,8 @@ iframe{
 .container-content{
     margin-top: 190px;
     margin-bottom: 50px;
-    @media(max-width: 420px){
-        margin-top: 270px;
+    @media(max-width: 450px){
+        margin-top: 70px;
     }
     .container{
         min-height: 600px;
@@ -193,6 +193,9 @@ iframe{
         font-family: 'Fjalla One';
         font-size: 20px;
         margin-top: 10px;
+        @media(max-width: 450px){
+            font-size: 15px;
+        }
     }
 }
 

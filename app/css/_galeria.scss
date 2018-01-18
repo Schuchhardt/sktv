@@ -32,6 +32,15 @@
         background-repeat: no-repeat;
         background-position: center; 
     }
+
+    .load-more{
+        text-align: center;
+        margin: auto;
+        display: block;
+        background: transparent;
+        padding: 10px 20px;
+        font-size: 20px;
+    }
 }
 
 
@@ -48,13 +57,13 @@
     }
     .photo-slider{
         position: relative;
-        padding: 40px;
+        padding: 5px;
         z-index: 1;
         ul{
             height: 90%;
             .slider-img{
                 height: 90%;
-                // background-size: contain !important;
+                background-size: contain !important;
                 background-repeat: no-repeat;
                 background-position: center;
             }
@@ -77,4 +86,8 @@
             right: -17px;   
         }
     }
+}
+
+.modal-dialog{
+    margin: 0 !important;
 }

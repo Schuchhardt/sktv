@@ -21,6 +21,17 @@ export default ["$http",
           return response.data;
         });
       },
+      loadGalleryPhotos: (galleryId, page) =>{
+        return $http({
+          method: 'GET',
+          url: CONFIG.apiURL + '/events/' + galleryId + '/photos',
+          params: {
+            page: page
+          }
+        }).then(function(response) {
+          return response.data;
+        });
+      },
       loadPost: (postId) => {
         return $http({
           method: 'GET',

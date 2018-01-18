@@ -1,4 +1,4 @@
-div(id="layout" ng-init="showNavbar = true")
+div(id="layout" ng-init="showNavbar = false")
 	#bar-header.row.header-bar.navbar-fixed-top
 		.col.col-lg-4.col-md-4.col-xs-4
 			.redescubre-logo(ui-sref="home")
@@ -6,7 +6,7 @@ div(id="layout" ng-init="showNavbar = true")
 			.logo(ui-sref="home")
 				img(src="images/sktv/logo.png")
 		.col.col-lg-4.col-md-4.col-xs-4
-			.social-media-icons
+			.social-media-icons.hidden-xs
 				a( href="https://www.facebook.com/sktvchile" target="_system")
 					span.icon-facebook
 				a( href="https://www.youtube.com/user/sktvchile/featured" target="_system")
@@ -43,7 +43,7 @@ div(id="layout" ng-init="showNavbar = true")
 	.container-content
 		block content
 		.footer(class="{{$parent.currentState}}-page")
-			.social-media-icons
+			.social-media-icons.hidden-xs
 				a( href="https://www.facebook.com/sktvchile" target="_system")
 					span.icon-facebook
 				a( href="https://www.youtube.com/user/sktvchile/featured" target="_system")

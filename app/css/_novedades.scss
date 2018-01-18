@@ -25,6 +25,17 @@
             }
         }
     }
+
+    @media(max-width: 450px){
+        padding: 20px 0;
+        .container-fixed{
+            padding: 0 5px;
+        }
+        .col{
+            padding: 10px;
+        }
+    }
+
     .see-more{
         font-size: 20px;
         color: blue;

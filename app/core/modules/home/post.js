@@ -6,6 +6,7 @@ export default class PostCtrl {
     const loadPost = () => {
       apiService.loadPost($stateParams.postId).then((response) => {
         $scope.currentPost = response.post;
+        $scope.postPhotos = response.post.all_photos;
         $scope.relatedPosts = response.related_posts;
         $scope.mapURL = 'https://www.google.com/maps/embed/v1/place?key=' + SETTINGS.mapKey + '&q=' + encodeURI(response.post.place);
       });
@@ -16,6 +17,7 @@ export default class PostCtrl {
         $scope.allPosts = response.posts;
       });
     };
+
 
     if ($state.current.name === 'post') {
       loadPost();
