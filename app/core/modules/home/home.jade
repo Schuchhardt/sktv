@@ -17,9 +17,10 @@ block content
 							.detail
 								p.chinese {{featured.intro}}
 								a.indie(ui-sref="post({postId: featured.id})") Ver más
-
 				.last-news(ng-show="recent_news_1")
-					.row
+					.row.context-row.cemento-bg
+						p.text-center.chinese LO ÚLTIMO
+					.row.content-row
 						.col.col-md-4.clickable(ng-repeat="post in recent_news_1 | orderBy:'-created_at'" ui-sref="post({postId: post.id})")
 							.hover-text
 								p.chinese {{post.title}}
@@ -28,11 +29,15 @@ block content
 					.main-banner.below
 				br
 				br
-				.instagram-feed(ng-show="instagram_feed")
+				.instagram-feed(ng-if="instagram_feed")
+					.row.context-row.cemento-bg
+						p.text-center.chinese INSTAGRAM
 					div.feed-html(ng-bind-html="instagram_feed")
 				.row.bg-white.m-b-80
 					.main-banner
 				.last-news.bottom(ng-show="recent_news_2")
+					.row.context-row.cemento-bg
+						p.text-center.chinese DESTACADO
 					.row
 						.col.col-md-4.clickable(ng-repeat="post in recent_news_2 | orderBy:'-created_at'" ui-sref="post({postId: post.id})")
 							.hover-text

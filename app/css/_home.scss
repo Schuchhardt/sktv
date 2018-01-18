@@ -3,6 +3,7 @@
     width: 100%;
     height: 100%;
     top: 5px;
+    z-index: 9;
    .main-hero{
         height: 570px;
         background-image: url("../images/sktv/bg.gif");
@@ -59,6 +60,13 @@
                 background: white;
                 padding: 10px;
                 text-align: end;
+                p{
+                    font-size: 15px;
+                    margin: 0;
+                }
+                a{
+                    font-size: 25px;
+                }
             }
         }
    }
@@ -70,6 +78,7 @@
             height: 100%;
             iframe{
                 margin: auto !important;
+                height: 105% !important;
             }
         }
         .col{
@@ -141,12 +150,28 @@
             bottom: 0px;
         }
    }
+    .context-row{
+        margin-bottom: 30px;
+        position: relative;
+        top: 10px;
+        height: 50px;
+        background-color: whitesmoke;
+        padding: 15px;
+        p{
+            color: $white;
+            font-size: 30px;
+            margin-top: -10px;
+        }
+    }
    .last-news{
         margin-top: 340px;
         padding: 30 15%;
         background-color: $white;
         &.bottom{
             margin-top: 0px;
+        }
+        .content-row{
+            // padding: 30 15%;
         }
         .col{
             padding: 0;

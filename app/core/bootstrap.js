@@ -16,6 +16,7 @@ angular.module('SKTV', [
 .constant('SETTINGS', {
   development: (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") ? true : false,
   apiHost: "http://bf-webservice.herokuapp.com/api/",
+  mapKey: 'AIzaSyDKKCkwKT3rrJB0FsDQJKuGjuweKe4cdN0'
 })
 
 .run(['$rootScope', function ($rootScope) {
@@ -23,6 +24,18 @@ angular.module('SKTV', [
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   });
 }])
+.config(function($sceDelegateProvider) {
+
+
+  $sceDelegateProvider.resourceUrlWhitelist([
+    // Allow same origin resource loads.
+    'self',
+    // Allow loading from our assets domain.  Notice the difference between * and **.
+    '*://www.youtube.com/**',
+    '*://www.google.com/**'
+  ]);
+
+})
 ;
 
 angular.element(document).ready(() => {

@@ -11,9 +11,13 @@ block content
 			h3.indie {{currentPost.subtitle}}
 			h2.indie {{currentPost.release_date | date: "dd/MM/yyyy"}}
 		.row.container-fixed(ng-if="currentPost")
-			.img(back-img="{{currentPost.image_url}}")
+			.img(ng-if="currentPost.image_url" back-img="{{currentPost.image_url}}")
+			.youtube(ng-if="currentPost.youtube_iframe_url")
+				iframe(ng-src="{{currentPost.youtube_iframe_url}}" frameborder="0" scrolling="no" allowfullscreen)
 			p {{currentPost.text}}
 			p {{currentPost.second_text}}
+			.map_url(ng-if="currentPost.place")
+				iframe(ng-src="{{mapURL}}")
 		.row
 			.main-banner
 		.related-posts(ng-show="relatedPosts")

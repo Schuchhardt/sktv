@@ -134,6 +134,7 @@ iframe{
 
 .container-content{
     margin-top: 190px;
+    margin-bottom: 50px;
     @media(max-width: 420px){
         margin-top: 270px;
     }
@@ -177,7 +178,7 @@ iframe{
 
 .footer{
     background: black;
-    height: 50px;
+    height: 45px;
     margin: 0;
     position: fixed;
     bottom: 0;
