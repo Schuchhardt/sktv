@@ -14,7 +14,7 @@ div(id="layout" ng-init="showNavbar = false")
 				a( href="https://www.instagram.com/sktvchile/" target="_system")
 					span.icon-instagram
 			button.menu-logo.hidden-sm.hidden-md.hidden-lg(ng-click="showNavbar = !showNavbar")
-	nav.navbar.navbar-fixed-top.appear.hidden-sm.hidden-md.hidden-lg(ng-show="showNavbar")
+	nav.navbar.navbar-fixed-top.appear.hidden-xs.absolute
 		.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
 			ul.nav.navbar-nav
 				li(ui-sref-active="active")
@@ -27,7 +27,7 @@ div(id="layout" ng-init="showNavbar = false")
 					a(ui-sref="agentes") AGENTES
 				li(ui-sref-active="active")
 					a(ui-sref="mapa") MAPA
-	nav.navbar.navbar-fixed-top.appear.absolute(ng-show="showNavbar")
+	nav.navbar.navbar-fixed-top.appear.absolute(ng-show="showNavbar").hidden-sm.hidden-md.hidden-lg
 		.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2
 			ul.nav.navbar-nav
 				li(ui-sref-active="active")
