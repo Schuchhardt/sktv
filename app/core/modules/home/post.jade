@@ -20,6 +20,8 @@ block content
 				iframe(ng-src="{{mapURL}}")
 		.row
 			.main-banner
+		.row.context-row.cemento-bg
+			p.text-center.chinese RECOMENDADOS
 		.related-posts(ng-show="relatedPosts")
 			.row
 				.col.col-md-4.clickable(ng-repeat="post in relatedPosts | orderBy:'-created_at'" ui-sref="post({postId: post.id})")

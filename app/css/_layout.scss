@@ -229,6 +229,14 @@ iframe{
 }
 
 
+  .context-row{
+        p{
+            color: $white;
+            font-size: 30px;
+            margin-top: -10px;
+        }
+    }
+
 .cemento-bg{
     background-image: url("../images/cemento2.jpg");
     background-size: cover;
