@@ -29,12 +29,27 @@ export default [ "$stateProvider", "$urlRouterProvider", ($stateProvider, $urlRo
     .state('agentes', {
       url: '/agentes',
       controller: 'AgentCtrl',
-      template: require('../modules/home/agentes.jade'),
+      template: require('../modules/agentes/agentes.jade'),
+    })
+    .state('agentes-list', {
+      url: '/agentes/:agentType',
+      controller: 'AgentCtrl',
+      template: require('../modules/agentes/agentes-list.jade'),
+    })
+    .state('agentes-detail', {
+      url: '/agentes/:agentType/:agentId',
+      controller: 'AgentCtrl',
+      template: require('../modules/agentes/agentes-detail.jade'),
     })
     .state('mapa', {
       url: '/mapa',
       controller: 'HomeCtrl',
       template: require('../modules/home/mapa.jade'),
+    })
+    .state('about', {
+      url: '/about',
+      controller: 'HomeCtrl',
+      template: require('../modules/home/about.jade'),
     })
     ;
 }];

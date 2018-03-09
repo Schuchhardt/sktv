@@ -1,21 +1,44 @@
 #agentes{
     background-color: $white;
     padding: 20px 10%;
-    .container-fixed{
-        padding: 0 10%;
+    .context-row p{
+        margin-top: 0px;
+    }
+    .container{
+        padding: 40px
     }
     .col{
-        padding: 30px;
+        cursor: pointer;
+        height: 300px;
         img{
-            width: 50%;
+            height: 280px;
+            display: block;
+            margin: auto;
         }
-        .text-desc{
-            max-width: 50%;
-            padding: 30px;
-            display: inline-block;
-            .title{
-                font-size: 30px;
+        p{
+            text-align: center;
+            position: relative;
+            top: -280px;
+            font-size: 30px;
+            color: white;
+            background: $black;
+            opacity: 0.6;
+            width: 430px;
+            display: block;
+            margin: auto;
+            height: 280px;
+            padding-top: 120px;
+            transition: all 0.5s linear;
+            &:hover{
+                opacity: 0.8;
             }
+        }
+    }
+    .detail{
+        .profile{
+            margin: auto;
+            display: block;
+            height: 80%;
         }
     }
 }

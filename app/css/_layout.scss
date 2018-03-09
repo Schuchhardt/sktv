@@ -1,5 +1,5 @@
 #layout{
-    background-color: $black;
+    background-color: $white;
     height: 100%;
     width: 100%;
     .navbar{
@@ -144,7 +144,7 @@ iframe{
 }
 
 .social-media-icons{
-    width: 120px;
+    width: 160px;
     display: block;
     top: 115px;
     position: absolute;
@@ -172,12 +172,16 @@ iframe{
         &.icon-instagram{
             background-image: url("../images/icon-instagram.png");
         }
+        &.icon-email{
+            border-radius: 100%;
+            background-image: url("../images/icon-email.jpg");
+        }
     }
 }
 
 
 .footer{
-    background: black;
+    background: rgba(107, 105, 105, 0.75);
     height: 45px;
     margin: 0;
     position: fixed;

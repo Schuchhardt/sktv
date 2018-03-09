@@ -1,0 +1,21 @@
+extends ../layout/home-layout
+block content
+	#agentes
+		.row
+			.main-banner
+		.row.context-row.cemento-bg
+			p.text-center.chinese AGENTES
+		br
+		br
+		.row
+			.col.col-md-12(ui-sref="agentes-list({agentType: 'fotografos'})")
+				img(src="../images/foto.jpg")
+				p FOTÓGRAFOS
+			.col.col-md-12(ui-sref="agentes-list({agentType: 'filmers'})")
+				img(src="../images/video.jpg")
+				p FILMERS
+			.col.col-md-12(ui-sref="agentes-list({agentType: 'kinesiologos'})")
+				img(src="../images/kine.jpg")
+				p KINESIOLOGOS
+		.row
+			.main-banner

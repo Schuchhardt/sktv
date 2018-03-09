@@ -1,0 +1,17 @@
+extends ../layout/home-layout
+block content
+	#agentes
+		.row
+			.main-banner
+		.row.context-row.cemento-bg
+			p.text-center.chinese.uppercased {{agentType}}
+		br
+		br
+		.row.container-fixed(ng-if="agents")
+			.col.col-md-12(ng-repeat="agent in agents" ui-sref="agentes-detail({agentType: agentType, agentId: agent.id})")
+				img(ng-src="{{agent.photo_url}}")
+				.text-desc
+					p.title.indie
+						{{agent.name}}
+		.row
+			.main-banner

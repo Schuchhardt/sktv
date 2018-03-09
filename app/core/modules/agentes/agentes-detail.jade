@@ -1,0 +1,33 @@
+extends ../layout/home-layout
+block content
+	#agentes
+		.row
+			.main-banner
+		.row.context-row.cemento-bg
+			p.text-center.chinese.uppercased {{agentType}}
+		br
+		br
+		.row.detail
+			.col-md-12
+				img.profile(ng-src="{{currentAgent.photo_url}}")
+				h2.text-center {{currentAgent.name}}
+				p.text-center
+					i {{currentAgent.quote}}
+				p.text-left {{currentAgent.text}}
+		.row.context-row.cemento-bg
+			p.text-center.chinese.uppercased CONTACTO
+		.row.container
+			p.text-left 
+				strong
+					| Instagram: {{currentAgent.instagram}}
+			p.text-left 
+				strong
+					| Facebook: {{currentAgent.facebook}}
+			p.text-left 
+				strong
+					| Correo: {{currentAgent.email}}
+			p.text-left 
+				strong
+					| Fono: {{currentAgent.phone}}
+		.row
+			.main-banner

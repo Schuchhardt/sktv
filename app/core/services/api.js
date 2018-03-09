@@ -72,6 +72,14 @@ export default ["$http",
           return response.data;
         });
       },
+      loadAgent: (agentType, agentId) => {
+        return $http({
+          method: 'GET',
+          url: CONFIG.apiURL + '/agents/' + agentType + '/' + agentId
+        }).then(function(response) {
+          return response.data;
+        });
+      },
       loadInstagramEmbed: (mediaId) => {
         return $http({
           method: 'GET',

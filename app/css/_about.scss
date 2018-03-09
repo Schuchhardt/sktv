@@ -1,0 +1,20 @@
+#about{
+    background-color: $white;
+    padding: 0px 10%;
+    min-height: 70vh;
+    img{
+    	height: 130px;
+	    display: block;
+	    margin: auto;
+	    padding: 10px;
+    }
+    p{
+    	font-weight: bolder;
+    	padding: 0 20%;
+    }
+    .cemento-bg{
+    	p{
+    		margin-top: 0px;
+    	}
+    }
+}
