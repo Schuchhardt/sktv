@@ -24,6 +24,10 @@ block content
 		.row.context-row.cemento-bg
 			p.text-center.chinese.uppercased CONTACTO
 		.row.contact
+			p.text-left(ng-show="currentAgent.youtube") 
+				strong
+					| Youtube: 
+				| {{currentAgent.youtube}}
 			p.text-left(ng-show="currentAgent.instagram") 
 				strong
 					| Instagram: 

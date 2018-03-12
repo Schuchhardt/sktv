@@ -87,7 +87,23 @@ export default ["$http",
         }).then(function(response) {
           return response.data;
         });
-      }
+      },
+      loadRegion: (regionId) => {
+        return $http({
+          method: 'GET',
+          url: CONFIG.apiURL + '/skateparks-list/' + regionId
+        }).then(function(response) {
+          return response.data;
+        });
+      },
+      loadSkatepark: (skateparkId) => {
+        return $http({
+          method: 'GET',
+          url: CONFIG.apiURL + '/skateparks/' + skateparkId
+        }).then(function(response) {
+          return response.data;
+        });
+      },
     };
 
     return service;

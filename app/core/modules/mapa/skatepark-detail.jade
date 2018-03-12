@@ -1,0 +1,31 @@
+extends ../layout/home-layout
+block content
+	#agentes
+		.row
+			.main-banner
+		.row.context-row.cemento-bg
+			p.text-center.chinese.uppercased SKATEPARKS DE CHILE
+		br
+		.row.detail(ng-if="currentSkatepark")
+			.col-md-12
+				h2.chinese.text-center {{currentSkatepark.name}}
+				h3.chinese.text-center {{currentRegion.name}}
+				br
+				.img.profile(back-img="{{currentSkatepark.image_url}}")
+				p.text-left {{currentSkatepark.commment}}
+		.row
+			.map_url(ng-if="currentSkatepark.location")
+				iframe(ng-src="{{mapURL}}")
+		.row.container-fixed.detail
+			.col-md-6(ng-repeat="img in featuredImages")
+				img.featured(ng-src="{{img.photo_url}}")
+			.col-md-6
+				img.featured(ng-src="{{img.photo_url}}")
+		.row.container-fixed.images(ng-if="currentSkateparkPhotos.length > 0")
+			.col.col-md-3.clickable(ng-repeat="photo in currentSkateparkPhotos" ng-click="showSlider(photo)")
+				.img(back-img="{{photo.photo_url}}")
+		.row
+			script(type="text/ng-template", id="sliderPhotos")
+				include ../galeria/slider-photos
+		.row
+			.main-banner

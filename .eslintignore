@@ -1,3 +1,4 @@
 app/bundle.js
+app/core/vendor/*.js
 node_modules/**/*.js
 bower_components/**/*.js

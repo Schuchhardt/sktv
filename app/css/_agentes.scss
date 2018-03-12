@@ -23,7 +23,7 @@
             color: white;
             background: $black;
             opacity: 0.6;
-            width: 430px;
+            width: 100%;
             display: block;
             margin: auto;
             height: 280px;
@@ -64,5 +64,19 @@
         .img{
             height: 180px;
         }
+    }
+    .img{
+        height: 280px;
+        width: 100%;
+        background: whitesmoke;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+    iframe{
+        height: 350px;
+        width: 100%;
+        display: block;
+        margin: 30px auto;
     }
 }

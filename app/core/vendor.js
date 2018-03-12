@@ -7,6 +7,7 @@ module.exports = function() {
   require('sweetalert/dist/sweetalert.css');
   require('angular-carousel/dist/angular-carousel.min.css');
   require('../css/main.scss');
+  require('../css/mapsvg.css');
   /* JS */
   global.$ = global.jQuery = require('jquery');
   require('angular');
@@ -24,6 +25,7 @@ module.exports = function() {
 
   require('lodash');
   require('ngSweetAlert');
+  // require('./vendor/mapsvg.js');
   // require('angular-parallax');
   // require('videogular');
   // require('videogular-poster');

@@ -1,0 +1,21 @@
+extends ../layout/home-layout
+block content
+	#agentes
+		.row
+			.main-banner
+		.row.context-row.cemento-bg
+			p.text-center.chinese.uppercased SKATEPARKS DE CHILE
+		br
+		.row
+			h3.chinese.text-center {{currentRegion.name}}
+			br
+		.row.agent-index.container-fixed(ng-if="skateparks.length == 0")
+			p.text-center No hay Skateparks registrados en esta region aún
+		.row.agent-index.container-fixed(ng-if="skateparks")
+			.col.col-md-6(ng-repeat="sk in skateparks" ui-sref="skatepark-detail({regionId: currentRegion.id, skateparkId: sk.id})")
+				.img(back-img="{{sk.image_url}}")
+				.text-desc
+					p.title.indie
+						{{sk.name}}
+		.row
+			.main-banner

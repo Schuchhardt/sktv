@@ -43,8 +43,18 @@ export default [ "$stateProvider", "$urlRouterProvider", ($stateProvider, $urlRo
     })
     .state('mapa', {
       url: '/mapa',
-      controller: 'HomeCtrl',
-      template: require('../modules/home/mapa.jade'),
+      controller: 'MapaCtrl',
+      template: require('../modules/mapa/mapa.jade'),
+    })
+    .state('skateparks-region', {
+      url: '/skateparks/:regionId',
+      controller: 'MapaCtrl',
+      template: require('../modules/mapa/skatepark-list.jade'),
+    })
+    .state('skatepark-detail', {
+      url: '/skateparks/:regionId/:skateparkId',
+      controller: 'MapaCtrl',
+      template: require('../modules/mapa/skatepark-detail.jade'),
     })
     .state('about', {
       url: '/about',
