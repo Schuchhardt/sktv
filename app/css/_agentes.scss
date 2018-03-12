@@ -7,7 +7,7 @@
     .container{
         padding: 40px
     }
-    .col{
+    .agent-index .col{
         cursor: pointer;
         height: 300px;
         img{
@@ -35,10 +35,34 @@
         }
     }
     .detail{
+        .quote{
+            font-size: 22px;
+        }
         .profile{
             margin: auto;
             display: block;
-            height: 80%;
+            height: 100%;
+        }
+        .col{
+            padding: 30px;
+        }
+        .featured{
+            margin: auto;
+            display: block;
+            width: 100%;
+        }
+        .img-full{
+            width: 100%;   
+        }
+    }
+    .contact{
+        padding: 50px;
+    }
+    .images{
+        height: 250px;
+        padding: 30px;
+        .img{
+            height: 180px;
         }
     }
 }

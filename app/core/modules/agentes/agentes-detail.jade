@@ -10,24 +10,44 @@ block content
 		.row.detail
 			.col-md-12
 				img.profile(ng-src="{{currentAgent.photo_url}}")
-				h2.text-center {{currentAgent.name}}
-				p.text-center
+				//- h2.text-center {{currentAgent.name}}
+				p.quote.text-center
 					i {{currentAgent.quote}}
 				p.text-left {{currentAgent.text}}
+		.row.detail
+			.col.col-md-6
+				p.text-right {{currentAgent.aditional_text}}
+			.col.col-md-6
+				img.featured(ng-src="{{currentAgent.featured_image}}")
+			br
+			br
 		.row.context-row.cemento-bg
 			p.text-center.chinese.uppercased CONTACTO
-		.row.container
-			p.text-left 
+		.row.contact
+			p.text-left(ng-show="currentAgent.instagram") 
 				strong
-					| Instagram: {{currentAgent.instagram}}
-			p.text-left 
+					| Instagram: 
+				| {{currentAgent.instagram}}
+			p.text-left(ng-show="currentAgent.facebook") 
 				strong
-					| Facebook: {{currentAgent.facebook}}
-			p.text-left 
+					| Facebook: 
+				| {{currentAgent.facebook}}
+			p.text-left(ng-show="currentAgent.email") 
 				strong
-					| Correo: {{currentAgent.email}}
-			p.text-left 
+					| Correo: 
+				| {{currentAgent.email}}
+			p.text-left(ng-show="currentAgent.phone") 
 				strong
-					| Fono: {{currentAgent.phone}}
+					| Fono: 
+				| {{currentAgent.phone}}
+		.row.container-fixed.detail
+			.col-md-12
+				img.featured(ng-src="{{currentAgentPhoto.photo_url}}")
+		.row.container-fixed.images
+			.col.col-md-3.clickable(ng-repeat="photo in currentAgentPhotos" ng-click="showSlider(photo)")
+				.img(back-img="{{photo.photo_url}}")
+		.row
+			script(type="text/ng-template", id="sliderPhotos")
+				include ../galeria/slider-photos
 		.row
 			.main-banner
