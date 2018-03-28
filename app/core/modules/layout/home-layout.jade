@@ -1,4 +1,4 @@
-div(id="layout" ng-init="showNavbar = false")
+div(id="layout" ng-init="showNavbar = false" ng-controller="LayoutController")
 	#bar-header.row.header-bar.navbar-fixed-top
 		.col.col-lg-4.col-md-4.col-xs-4
 			.redescubre-logo(ui-sref="home")
@@ -30,7 +30,23 @@ div(id="layout" ng-init="showNavbar = false")
 				li(ui-sref-active="active")
 					a(ui-sref="mapa") MAPA
 		.col-md-3.col-sm-2
-			ul.nav.navbar-nav.pull-right
+			ul.nav.navbar-nav.pull-left
+				li.search-bar
+					div(angucomplete-alt
+						placeholder="Buscador"
+						pause="500"
+						selected-object="searchResult"
+						remote-url="{{searchUrl}}"
+						remote-url-request-formatter="remoteUrlRequestFn"
+						remote-url-data-field="result"
+						title-field="title"
+						description-field="content"
+						minlength="2"
+						text-searching="Buscando..."
+						text-no-results="No hay resultados"
+						input-class="form-control form-control-small"
+						match-class="highlight"
+                    )
 				li.active
 					a(ui-sref="about") SKTV
 	nav.navbar.navbar-fixed-top.appear.absolute(ng-show="showNavbar").hidden-sm.hidden-md.hidden-lg

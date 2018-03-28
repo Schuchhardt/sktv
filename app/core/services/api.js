@@ -1,14 +1,10 @@
-export default ["$http",
-  ($http) => {
-    const CONFIG = {
-      apiURL: (window.location.hostname === "localhost") ? 'http://localhost:8080/api' : "https://sktv-api.herokuapp.com/api",
-      instagramEmbed: 'https://api.instagram.com/oembed?url=http://instagr.am/p/'
-    };
+export default ["$http", "SETTINGS",
+  ($http, SETTINGS) => {
     const service = {
       loadMainGallery: () => {
         return $http({
           method: 'GET',
-          url: CONFIG.apiURL + '/events/'
+          url: SETTINGS.apiURL + '/events/'
         }).then(function(response) {
           return response.data;
         });
@@ -16,7 +12,7 @@ export default ["$http",
       loadGallery: (galleryId) => {
         return $http({
           method: 'GET',
-          url: CONFIG.apiURL + '/events/' + galleryId
+          url: SETTINGS.apiURL + '/events/' + galleryId
         }).then(function(response) {
           return response.data;
         });
@@ -24,7 +20,7 @@ export default ["$http",
       loadGalleryPhotos: (galleryId, page) =>{
         return $http({
           method: 'GET',
-          url: CONFIG.apiURL + '/events/' + galleryId + '/photos',
+          url: SETTINGS.apiURL + '/events/' + galleryId + '/photos',
           params: {
             page: page
           }
@@ -35,7 +31,7 @@ export default ["$http",
       loadPost: (postId) => {
         return $http({
           method: 'GET',
-          url: CONFIG.apiURL + '/posts/' + postId
+          url: SETTINGS.apiURL + '/posts/' + postId
         }).then(function(response) {
           return response.data;
         });
@@ -43,7 +39,7 @@ export default ["$http",
       loadAllPosts: () => {
         return $http({
           method: 'GET',
-          url: CONFIG.apiURL + '/posts/'
+          url: SETTINGS.apiURL + '/posts/'
         }).then(function(response) {
           return response.data;
         });
@@ -51,7 +47,7 @@ export default ["$http",
       loadInstagramFeed: () => {
         return $http({
           method: 'GET',
-          url: CONFIG.apiURL + '/feed/'
+          url: SETTINGS.apiURL + '/feed/'
         }).then(function(response) {
           return response.data;
         });
@@ -59,15 +55,15 @@ export default ["$http",
       loadRecentNews: () => {
         return $http({
           method: 'GET',
-          url: CONFIG.apiURL + '/recent_news'
+          url: SETTINGS.apiURL + '/recent_news'
         }).then(function(response) {
           return response.data;
         });
       },
-      loadAgents: () => {
+      loadAgents: (agentType) => {
         return $http({
           method: 'GET',
-          url: CONFIG.apiURL + '/agents'
+          url: SETTINGS.apiURL + '/agents/' + agentType
         }).then(function(response) {
           return response.data;
         });
@@ -75,7 +71,7 @@ export default ["$http",
       loadAgent: (agentType, agentId) => {
         return $http({
           method: 'GET',
-          url: CONFIG.apiURL + '/agents/' + agentType + '/' + agentId
+          url: SETTINGS.apiURL + '/agents/' + agentType + '/' + agentId
         }).then(function(response) {
           return response.data;
         });
@@ -83,7 +79,7 @@ export default ["$http",
       loadInstagramEmbed: (mediaId) => {
         return $http({
           method: 'GET',
-          url: CONFIG.instagramEmbed + mediaId
+          url: SETTINGS.instagramEmbed + mediaId
         }).then(function(response) {
           return response.data;
         });
@@ -91,7 +87,7 @@ export default ["$http",
       loadRegion: (regionId) => {
         return $http({
           method: 'GET',
-          url: CONFIG.apiURL + '/skateparks-list/' + regionId
+          url: SETTINGS.apiURL + '/skateparks-list/' + regionId
         }).then(function(response) {
           return response.data;
         });
@@ -99,7 +95,7 @@ export default ["$http",
       loadSkatepark: (skateparkId) => {
         return $http({
           method: 'GET',
-          url: CONFIG.apiURL + '/skateparks/' + skateparkId
+          url: SETTINGS.apiURL + '/skateparks/' + skateparkId
         }).then(function(response) {
           return response.data;
         });

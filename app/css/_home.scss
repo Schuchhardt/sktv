@@ -15,7 +15,7 @@
         .main-banner{
             position: relative;
             top: 20px;
-            height: 120px;
+            height: 80px;
             @media(min-width: 450px){
                 margin: 0px 25%;
             }
@@ -23,7 +23,7 @@
         .featured-container{
             background: rgba(255, 255, 255, 0.3803921568627451);
             margin-top: 40px;
-            height: 300px;
+            height: 460px;
             .col{
                 border: 1px solid black;
                 background-color: white;
@@ -32,7 +32,7 @@
             .img{
                 margin-top: 30px;
                 background-size: contain !important;
-                height: 350px;
+                height: 280px;
                 background-position: center;
                 background-repeat: no-repeat;
             }
@@ -84,13 +84,13 @@
    }
    .instagram-feed{
         margin-top: -40px;
-        padding: 80px 15%;
+        padding: 30px 15%;
         background-color: $white;
         .feed-html{
-            height: 100%;
+            height: 110%;
             iframe{
                 margin: auto !important;
-                height: 105% !important;
+                height: 100% !important;
             }
         }
         .col{
@@ -176,7 +176,7 @@
         }
     }
    .last-news{
-        margin-top: 340px;
+        margin-top: 0px;
         padding: 30 15%;
         background-color: $white;
 

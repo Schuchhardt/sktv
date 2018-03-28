@@ -13,6 +13,10 @@ block content
 				br
 				.img.profile(back-img="{{currentSkatepark.image_url}}")
 				p.text-left {{currentSkatepark.commment}}
+		.row(ng-show="currentSkatepark.flaitometro")
+			.flaitometro
+				h4.text-center Flaitometro
+				img(ng-src="{{flaitometro}}")
 		.row
 			.map_url(ng-if="currentSkatepark.location")
 				iframe(ng-src="{{mapURL}}")

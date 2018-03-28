@@ -22,13 +22,16 @@
             font-size: 30px;
             color: white;
             background: $black;
-            opacity: 0.6;
+            opacity: 0.2;
             width: 100%;
             display: block;
             margin: auto;
             height: 280px;
             padding-top: 120px;
             transition: all 0.5s linear;
+            &.index{
+                width: 430px;
+            }
             &:hover{
                 opacity: 0.8;
             }
@@ -37,6 +40,7 @@
     .detail{
         .quote{
             font-size: 22px;
+            margin: 20px;
         }
         .profile{
             margin: auto;

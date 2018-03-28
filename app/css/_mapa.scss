@@ -24,11 +24,24 @@
 		position: relative;
     	path{
     		cursor: pointer;
-    		fill: #6c6b66;
+    		// fill: #6c6b66;
     		transition: all 0.5s linear;
     		&:hover{
     			fill: #ff323d;
     		}
     	}
+    }
+}
+
+.flaitometro{
+    padding: 0px 100px;
+    h4{
+        font-size: 3vw;
+        margin-bottom: 0px;
+    }
+    img{
+        display: block;
+        margin: auto;
+        width: 60%;
     }
 }

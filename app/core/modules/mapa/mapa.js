@@ -66,6 +66,14 @@ export default class MapaCtrl {
       }
     ];
 
+    const flaitometros = [
+      require("../../../images/flaitometro/1.jpg"),
+      require("../../../images/flaitometro/2.jpg"),
+      require("../../../images/flaitometro/3.jpg"),
+      require("../../../images/flaitometro/4.jpg"),
+      require("../../../images/flaitometro/5.jpg"),
+    ];
+
     const loadRegion = function () {
       $scope.currentRegion = _.findWhere(allRegions, {id: $stateParams.regionId});
       apiService.loadRegion($stateParams.regionId).then(function (res) {
@@ -81,7 +89,7 @@ export default class MapaCtrl {
         $scope.featuredImages = allPhotos.slice(0, 2);
         $scope.currentSkateparkPhotos = allPhotos.slice(2, 6);
         $scope.mapURL = 'https://www.google.com/maps/embed/v1/place?key=' + SETTINGS.mapKey + '&q=' + encodeURI(res.skatepark.location);
-        console.log($scope.currentSkatepark);
+        $scope.flaitometro = flaitometros[res.skatepark.flaitometro - 1];
       });
     };
 

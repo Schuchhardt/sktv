@@ -14,14 +14,14 @@ block content
 			.img(ng-if="currentPost.image_url" back-img="{{currentPost.image_url}}")
 			.youtube(ng-if="currentPost.youtube_iframe_url")
 				iframe(ng-src="{{currentPost.youtube_iframe_url}}" frameborder="0" scrolling="no" allowfullscreen)
-			p {{currentPost.text}}
-			p {{currentPost.second_text}}
+			p.text(ng-bind-html="currentPost.text | markdown")
+			p.text {{currentPost.second_text}}
 			.map_url(ng-if="currentPost.place")
 				iframe(ng-src="{{mapURL}}")
 		.row
 			.main-banner
-		.row.context-row.cemento-bg
-			p.text-center.chinese RECOMENDADOS
+		.row.cemento-bg
+			p.text-center.chinese.title RECOMENDADOS
 		.related-posts(ng-show="relatedPosts")
 			.row
 				.col.col-md-4.clickable(ng-repeat="post in relatedPosts | orderBy:'-created_at'" ui-sref="post({postId: post.id})")

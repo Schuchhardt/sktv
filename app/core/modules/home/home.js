@@ -10,9 +10,11 @@ export default class HomeCtrl {
           $scope.recent_news_2 = response.recent_news.slice(3, 6);
         }
         $scope.featured = response.featured;
-        apiService.loadInstagramEmbed(response.instagram_feed).then( (res) => {
-          $scope.instagram_feed = $sce.trustAsHtml(res.html);
-        });
+        if (response.instagram_feed) {
+          apiService.loadInstagramEmbed(response.instagram_feed).then( (res) => {
+            $scope.instagram_feed = $sce.trustAsHtml(res.html);
+          });
+        }
       });
     };
 

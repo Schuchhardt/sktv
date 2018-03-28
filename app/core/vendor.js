@@ -8,6 +8,7 @@ module.exports = function() {
   require('angular-carousel/dist/angular-carousel.min.css');
   require('../css/main.scss');
   require('../css/mapsvg.css');
+  require('angucomplete-alt/angucomplete-alt.css');
   /* JS */
   global.$ = global.jQuery = require('jquery');
   require('angular');
@@ -16,15 +17,22 @@ module.exports = function() {
   require('angular-touch');
   require('angular-carousel');
   // require('angular-scroll');
-  // require('angular-sanitize');
+  require('angular-sanitize');
   require('angular-ui-router');
   require('angular-ui-bootstrap');
   require('angular-ui-select/select.min.js');
   // require('angular-audio/app/angular.audio.js');
   require('sweetalert');
+  require('angucomplete-alt');
 
   require('lodash');
   require('ngSweetAlert');
+  global.showdown = require('showdown/dist/showdown.js');
+  require('angular-markdown-filter/markdown.js');
+  global.Raven = require('raven-js/dist/raven.js');
+  global.Raven.Plugins = {};
+  global.Raven.Plugins.Angular = require('raven-js/plugins/angular.js');
+
   // require('./vendor/mapsvg.js');
   // require('angular-parallax');
   // require('videogular');

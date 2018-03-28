@@ -5,7 +5,7 @@ export default class AgentCtrl {
     $scope.agentType = $stateParams.agentType;
 
     const loadAgents = () => {
-      apiService.loadAgents().then((response) => {
+      apiService.loadAgents($stateParams.agentType).then((response) => {
         $scope.agents = response.agents;
       });
     };

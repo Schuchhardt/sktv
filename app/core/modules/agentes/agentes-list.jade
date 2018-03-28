@@ -7,11 +7,10 @@ block content
 			p.text-center.chinese.uppercased {{agentType}}
 		br
 		br
+		.row.agent-index.container-fixed(ng-if="agents.length == 0")
+			p.text-center No hay {{agentType}} registrados aún
 		.row.agent-index.container-fixed(ng-if="agents")
 			.col.col-md-12(ng-repeat="agent in agents" ui-sref="agentes-detail({agentType: agentType, agentId: agent.id})")
 				img(ng-src="{{agent.photo_url}}")
-				.text-desc
-					p.title.indie
-						{{agent.name}}
 		.row
 			.main-banner
