@@ -29,8 +29,10 @@ div(id="layout" ng-init="showNavbar = false" ng-controller="LayoutController")
 					a(ui-sref="agentes") AGENTES
 				li(ui-sref-active="active")
 					a(ui-sref="mapa") MAPA
-		.col-md-3.col-sm-2
+		.col-md-3.col-sm-2.p-r-0
 			ul.nav.navbar-nav.pull-left
+				li.active
+					a(ui-sref="about") SKTV
 				li.search-bar
 					div(angucomplete-alt
 						placeholder="Buscador"
@@ -47,8 +49,6 @@ div(id="layout" ng-init="showNavbar = false" ng-controller="LayoutController")
 						input-class="form-control form-control-small"
 						match-class="highlight"
                     )
-				li.active
-					a(ui-sref="about") SKTV
 	nav.navbar.navbar-fixed-top.appear.absolute(ng-show="showNavbar").hidden-sm.hidden-md.hidden-lg
 		.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2
 			ul.nav.navbar-nav
