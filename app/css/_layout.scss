@@ -20,7 +20,7 @@
                 &.active{
                     a{
                         font-size: 20px;
-                        color: $red;
+                        color: $red; 
                         &:hover{
                             color: $red;
                             background-color: transparent;
@@ -28,8 +28,21 @@
                     }
                 }
                 &.search-bar{
-                    margin: 3px;
-                    width: 75%;
+                    width: 100%;
+                    .ng-isolate-scope{
+                        height: 30px;
+                    }
+                    .form-control{
+                        border-radius: 18px;
+                        position: relative;
+                        top: -27px;
+                        height: 34px;
+                    }
+                    .angucomplete-dropdown{
+                        margin-top: -27px;
+                        margin-left: 12px;
+                        width: 270px;
+                    }
                 }
 
             }
@@ -109,7 +122,7 @@
     }
 }
 p a{
-    color: lighten($pink-red, 20%);
+    color: $red;
     font-weight: bolder;
     font-size: 115%;
 }
@@ -187,6 +200,25 @@ iframe{
             border-radius: 100%;
             background-image: url("../images/icon-email.jpg");
         }
+    }
+}
+
+span.icon{
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    &.icon-search{
+        background-image: url("../images/icon-search.png");
+        position: relative;
+        float: right;
+        top: 4px;
+        left: -10px;
+        z-index: 10;
     }
 }
 

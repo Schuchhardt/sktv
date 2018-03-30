@@ -31,38 +31,33 @@ block content
 			script(type="text/ng-template", id="sliderPhotos")
 				include ../galeria/slider-photos
 		.row.context-row.cemento-bg
-			p.text-center.chinese.uppercased CONTACTO
+			p.text-center.chinese.uppercased INFORMACIÓN DE CONTACTO
 		.row
 			.contact
 				p.text-center(ng-show="currentAgent.youtube")
-					span.icon.icon-youtube
-					strong
-						| Youtube: 
-					a(ng-href="{{currentAgent.youtube}}") 
-						{{currentAgent.youtube}}
+					a(ng-href="{{currentAgent.youtube}}")
+						span.icon.icon-youtube
+						strong
+							| Youtube
 				p.text-center(ng-show="currentAgent.instagram" )
-					span.icon.icon-instagram
-					strong
-						| Instagram: 
-					a(ng-href="{{currentAgent.instagram}}") 
-						{{currentAgent.instagram}}
+					a(ng-href="{{currentAgent.instagram}}")
+						span.icon.icon-instagram
+						strong
+							| Instagram
 				p.text-center(ng-show="currentAgent.facebook") 
-					span.icon.icon-facebook
-					strong
-						| Facebook: 
-					a(ng-href="{{currentAgent.facebook}}") 
-						{{currentAgent.facebook}}
+					a(ng-href="{{currentAgent.facebook}}")
+						span.icon.icon-facebook
+						strong
+							| Facebook
 				p.text-center(ng-show="currentAgent.email") 
-					span.icon.icon-email
-					strong
-						| Correo: 
 					a(ng-href="mailto:{{currentAgent.email}}")
-						{{currentAgent.email}}
+						span.icon.icon-email
+						strong
+							| Correo
 				p.text-center(ng-show="currentAgent.phone") 
-					span.icon.icon-phone
-					strong
-						| Fono: 
-					a(ng-href="tel:{{currentAgent.email}}")
-						{{currentAgent.phone}}
+					a(ng-href="tel:{{currentAgent.phone}}")
+						span.icon.icon-phone
+						strong
+							| Fono
 		.row
 			.main-banner

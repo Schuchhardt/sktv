@@ -29,12 +29,13 @@ div(id="layout" ng-init="showNavbar = false" ng-controller="LayoutController")
 					a(ui-sref="agentes") AGENTES
 				li(ui-sref-active="active")
 					a(ui-sref="mapa") MAPA
-		.col-md-3.col-sm-2.p-r-0
-			ul.nav.navbar-nav.pull-left
-				li.active
+				li(ui-sref-active="active")
 					a(ui-sref="about") SKTV
+		.col-md-3.col-sm-2.p-r-0
+			ul.nav.navbar-nav.pull-left(ng-init="showSearch = false")
 				li.search-bar
-					div(angucomplete-alt
+					span.clickable.icon.icon-search(ng-click="showSearch = !showSearch")
+					div(angucomplete-alt ng-show="showSearch"
 						placeholder="Buscador"
 						pause="500"
 						selected-object="searchResult"
@@ -48,7 +49,7 @@ div(id="layout" ng-init="showNavbar = false" ng-controller="LayoutController")
 						text-no-results="No hay resultados"
 						input-class="form-control form-control-small"
 						match-class="highlight"
-                    )
+	               )
 	nav.navbar.navbar-fixed-top.appear.absolute(ng-show="showNavbar").hidden-sm.hidden-md.hidden-lg
 		.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2
 			ul.nav.navbar-nav
@@ -62,9 +63,7 @@ div(id="layout" ng-init="showNavbar = false" ng-controller="LayoutController")
 					a(ui-sref="agentes") AGENTES
 				li(ui-sref-active="active")
 					a(ui-sref="mapa") MAPA
-		.col-md-3.col-sm-2
-			ul.nav.navbar-nav.pull-right
-				li.active
+				li(ui-sref-active="active")
 					a(ui-sref="about") SKTV
 	.container-content
 		block content

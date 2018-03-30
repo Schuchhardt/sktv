@@ -8,13 +8,28 @@ block content
 		br
 		br
 		br
+		.row.container-fixed.detail
+			.col-md-12
+				img.featured(ng-src="{{currentEvent.cover_url}}")
+				p.text-center {{currentEvent.featured_image}}
 		.row
-			h1.indie {{currentEvent.name}}
-			h3.indie {{currentEvent.description}}
+			h3.indie.text-center {{currentEvent.description}}
 			h2.indie {{currentEvent.release_date | date: "dd/MM/yyyy"}}
-		.row.container-fixed
-			.col.col-md-3.clickable(ng-repeat="photo in eventPhotos" ng-click="showSlider(photo)")
+		.row.container-fixed(ng-if="eventFeaturedPhoto")
+			.col.col-md-12.clickable( ng-click="showSlider(eventFeaturedPhoto)")
+				img.featured(ng-src="{{eventFeaturedPhoto.photo_url}}")
+		.row.container-fixed.feat-slider(ng-if="eventFeaturedPhotos")
+			.simple.col.col-md-2.clickable(ng-repeat="photo in eventFeaturedPhotos" ng-click="showSlider(photo)")
 				.img(back-img="{{photo.photo_url}}")
+		.row
+			h3.indie.text-center {{currentEvent.text}}
+		//- .row.container-fixed(ng-if="eventPhotos")
+		//- 	.col.col-md-4.clickable(ng-repeat="photo in eventPhotos" ng-click="showSlider(photo)")
+		//- 		.img(back-img="{{photo.photo_url}}")
+		.row.masonry
+			.brick.clickable(ng-repeat="photo in eventPhotos" ng-click="showSlider(photo)")
+				img(src="{{photo.photo_url}}")
+		.row
 			.col(ng-if="thereIsMorePhotos")
 				button.indie.load-more(ng-click="loadMorePhotos()") Ver más
 		.row

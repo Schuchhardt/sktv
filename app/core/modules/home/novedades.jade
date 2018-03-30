@@ -5,8 +5,6 @@ block content
 		.row.cemento-bg
 			p.text-center.chinese.title NOVEDADES
 		br
-		br
-		br
 		.row.container-fixed(ng-if="allPosts")
 			.col.col-md-12.clickable(ng-repeat="post in allPosts" ui-sref="post({postId: post.id})")
 				.img(back-img="{{post.image_url}}")
@@ -19,3 +17,4 @@ block content
 					p.indie.see-more
 						small
 							| Ver más...
+		.row.main-banner

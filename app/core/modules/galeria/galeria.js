@@ -12,7 +12,10 @@ export default class GaleriaCtrl {
     const loadGallery = (galleryId) =>{
       apiService.loadGallery(galleryId).then( (response) => {
         $scope.currentEvent = response.event;
-        $scope.eventPhotos = response.event.all_photos;
+        const featuredPhotos = response.event.all_photos.slice(0, 7);
+        $scope.eventFeaturedPhoto = featuredPhotos.pop();
+        $scope.eventFeaturedPhotos = featuredPhotos.reverse();
+        $scope.eventPhotos = response.event.all_photos.slice(8, 15);
       });
     };
 
