@@ -22,10 +22,8 @@ block content
 			.simple.col.col-md-2.clickable(ng-repeat="photo in eventFeaturedPhotos" ng-click="showSlider(photo)")
 				.img(back-img="{{photo.photo_url}}")
 		.row
-			h3.indie.text-center {{currentEvent.text}}
-		//- .row.container-fixed(ng-if="eventPhotos")
-		//- 	.col.col-md-4.clickable(ng-repeat="photo in eventPhotos" ng-click="showSlider(photo)")
-		//- 		.img(back-img="{{photo.photo_url}}")
+			//- h3.indie.text-center {{currentEvent.text}}
+			h3.indie.text-center(ng-bind-html="trust(currentEvent.text)")
 		.row.masonry
 			.brick.clickable(ng-repeat="photo in eventPhotos" ng-click="showSlider(photo)")
 				img(src="{{photo.photo_url}}")

@@ -14,8 +14,8 @@ block content
 			.img(ng-if="currentPost.image_url" back-img="{{currentPost.image_url}}")
 			.youtube(ng-if="currentPost.youtube_iframe_url")
 				iframe(ng-src="{{currentPost.youtube_iframe_url}}" frameborder="0" scrolling="no" allowfullscreen)
-			p.text(ng-bind-html="currentPost.text | markdown")
-			p.text {{currentPost.second_text}}
+			p.text(ng-bind-html="trust(currentPost.text)")
+			p.text(ng-bind-html="trust(currentPost.second_text)")
 			.map_url(ng-if="currentPost.place")
 				iframe(ng-src="{{mapURL}}")
 		.row

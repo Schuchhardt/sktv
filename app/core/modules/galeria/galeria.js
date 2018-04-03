@@ -1,6 +1,6 @@
 export default class GaleriaCtrl {
   /* @ngInject */
-  constructor($scope, $state, $stateParams, $uibModal, apiService) {
+  constructor($scope, $state, $stateParams, $uibModal, $sce, apiService) {
     let page = 1;
 
     const loadMainGallery = () => {
@@ -40,6 +40,10 @@ export default class GaleriaCtrl {
 
     $scope.getBgUrl = (photo) => {
       return {'background-image': 'url(' + photo + ');'};
+    };
+
+    $scope.trust = function (text) {
+      return $sce.trustAsHtml(text);
     };
 
     $scope.showSlider = (photo) => {

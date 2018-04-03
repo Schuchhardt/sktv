@@ -1,6 +1,6 @@
 export default class PostCtrl {
   /* @ngInject */
-  constructor($scope, $state, $rootScope, apiService, $stateParams, SETTINGS) {
+  constructor($scope, $state, $rootScope, $sce, apiService, $stateParams, SETTINGS) {
     $rootScope.currentState = $state.current.name;
 
     const loadPost = () => {
@@ -18,6 +18,9 @@ export default class PostCtrl {
       });
     };
 
+    $scope.trust = function (text) {
+      return $sce.trustAsHtml(text);
+    };
 
     if ($state.current.name === 'post') {
       loadPost();
