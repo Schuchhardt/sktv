@@ -4,7 +4,7 @@ block content
 		.row
 			banner
 		.row.context-row.cemento-bg
-			p.text-center.chinese.uppercased SKATEPARKS DE CHILE
+			p.text-center.chinese.uppercased.no-margin SKATEPARKS DE CHILE
 		br
 		.row.detail(ng-if="currentSkatepark")
 			.col-md-12
@@ -12,14 +12,9 @@ block content
 				h3.chinese.text-center {{currentRegion.name}}
 				br
 				.img.profile(back-img="{{currentSkatepark.image_url}}")
-				p.text-left(ng-bind-html="trust(currentSkatepark.commment)")
-		.row(ng-show="currentSkatepark.flaitometro")
-			.flaitometro
-				h4.text-center Flaitómetro
-				img(ng-src="{{flaitometro}}")
-		.row
-			.map_url(ng-if="currentSkatepark.location")
-				iframe(ng-src="{{mapURL}}")
+				br
+				p.text-center.no-margin {{currentSkatepark.caption}}
+				p.text-center.text(ng-bind-html="trust(currentSkatepark.commment)")
 		.row.container-fixed.detail
 			.col-md-6(ng-repeat="img in featuredImages")
 				img.featured(ng-src="{{img.photo_url}}")
@@ -31,5 +26,16 @@ block content
 		.row
 			script(type="text/ng-template", id="sliderPhotos")
 				include ../galeria/slider-photos
+		.row
+			.col.col-md-12
+				p.text-center.text(ng-bind-html="trust(currentSkatepark.aditional_text)")
+		.row(ng-show="currentSkatepark.flaitometro")
+			.flaitometro
+				h4.text-center Flaitómetro
+				img(ng-src="{{flaitometro}}")
+				p.no-margin.text-center.text(ng-bind-html="trust(currentSkatepark.flaitometro_text)")
+		.row
+			.map_url(ng-if="currentSkatepark.location")
+				iframe(ng-src="{{mapURL}}")
 		.row
 			banner(second="true")

@@ -13,8 +13,9 @@ block content
 				img.featured(ng-src="{{currentEvent.cover_url}}")
 				p.text-center {{currentEvent.featured_image}}
 		.row
-			h3.indie.text-center {{currentEvent.description}}
-			h2.indie.text-center {{currentEvent.release_date | date: "dd/MM/yyyy"}}
+			h2.text-center {{currentEvent.name}}
+			h3.text-center {{currentEvent.release_date | date: "dd/MM/yyyy"}}
+			p.text.text-center(ng-bind-html="trust(currentEvent.description)")
 		.row.container-fixed(ng-if="eventFeaturedPhoto")
 			.col.col-md-12.clickable( ng-click="showSlider(eventFeaturedPhoto)")
 				img.featured(ng-src="{{eventFeaturedPhoto.photo_url}}")
@@ -22,7 +23,7 @@ block content
 			.simple.col.col-md-2.clickable(ng-repeat="photo in eventFeaturedPhotos" ng-click="showSlider(photo)")
 				.img(back-img="{{photo.photo_url}}")
 		.row
-			h3.indie.text-center(ng-bind-html="trust(currentEvent.text)")
+			h3.text-center(ng-bind-html="trust(currentEvent.text)")
 		.row.masonry
 			.brick.clickable(ng-repeat="photo in eventPhotos" ng-click="showSlider(photo, true)")
 				img(src="{{photo.photo_url}}")

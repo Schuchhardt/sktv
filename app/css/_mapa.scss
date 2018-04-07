@@ -17,6 +17,10 @@
     	font-size: 20px;
     	margin: 20px;
     }
+    p{
+        margin: 50px;
+        text-align: center;
+    }
     svg{
 		display: block;
 		margin: auto;
@@ -30,18 +34,24 @@
     			fill: #ff323d;
     		}
     	}
+        @media(max-width: 760px){
+            right: 40%;
+        }
+        @media(max-width: 443px){
+            right: 100%;
+        }
     }
 }
 
 .flaitometro{
     padding: 0px 100px;
     h4{
-        font-size: 3vw;
+        font-size: 2vw;
         margin-bottom: 0px;
     }
     img{
         display: block;
         margin: auto;
-        width: 60%;
+        width: 40%;
     }
 }

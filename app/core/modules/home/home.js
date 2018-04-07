@@ -2,7 +2,7 @@ export default class HomeCtrl {
   /* @ngInject */
   constructor($scope, $state, $rootScope, $sce, $localStorage, apiService) {
     $rootScope.currentState = $state.current.name;
-
+    $scope.iframeLoaded = false;
     const loadRecentNews = () => {
       apiService.loadRecentNews().then((response) => {
         $scope.recent_news_1 = response.recent_news.slice(0, 3);
@@ -13,6 +13,9 @@ export default class HomeCtrl {
         if (response.instagram_feed) {
           apiService.loadInstagramEmbed(response.instagram_feed).then( (res) => {
             $scope.instagram_feed = $sce.trustAsHtml(res.html);
+            setTimeout(function() {
+              $scope.iframeLoaded = true;
+            }, 2000);
           });
         }
         apiService.loadBanners().then((res) => {

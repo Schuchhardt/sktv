@@ -8,6 +8,14 @@
             padding: 1px;
         }
     }
+
+    h3{
+        margin: 0 10%;
+        font-weight: 400;
+    }
+    h2{
+        font-weight: 400;
+    }
     img{
         width: 100%;
         &.featured{
@@ -25,6 +33,9 @@
     p{
         text-align: center; 
         margin-top: 10px;
+        &.text{
+            font-size: 20px;
+        }
     }
     .name{
         font-size: 17px;
@@ -136,7 +147,7 @@
 #sliderPhotos{
     height: 100%;
     width: 100%;
-    background: $black;
+    background: transparent;
     .close{
         z-index: 9999999;
         color: $white;

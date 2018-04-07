@@ -85,7 +85,7 @@
         padding: 30px 15%;
         background-color: $white;
         .feed-html{
-            height: 110%;
+            height: 140%;
             iframe{
                 margin: auto !important;
                 height: 100% !important;
@@ -155,9 +155,12 @@
         a{
             width: 100%;
             height: 100%;
-            display: block;
+            display: none;
             position: absolute;
             bottom: 0px;
+        }
+        .loaded a{
+            display: block;
         }
    }
     .context-row{
