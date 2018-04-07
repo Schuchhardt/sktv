@@ -2,7 +2,7 @@ extends ../layout/home-layout
 block content
 	#mapa
 		.row
-			.main-banner
+			banner
 		.title-badge
 			p.chinese Mapa de Spots
 		br
@@ -16,8 +16,4 @@ block content
 			#mapsvg
 				include ../../../images/chile.svg
 		.row
-			.main-banner
-		//- .title-badge
-		//- 	p.chinese Skateparks
-		//- br
-		//- br
+			banner(second="true")

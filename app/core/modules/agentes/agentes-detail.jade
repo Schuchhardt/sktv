@@ -2,7 +2,7 @@ extends ../layout/home-layout
 block content
 	#agentes
 		.row
-			.main-banner
+			banner
 		.row.context-row.cemento-bg
 			p.text-center.chinese.uppercased {{agentType}}
 		br
@@ -12,10 +12,10 @@ block content
 				img.profile(ng-src="{{currentAgent.photo_url}}")
 				p.quote.text-center
 					i {{currentAgent.quote}}
-				p.text-left {{currentAgent.text}}
+				p.text-left(ng-bind-html="trust(currentAgent.text)")
 		.row.detail
 			.col.col-md-6
-				p.text-right {{currentAgent.aditional_text}}
+				p.text-right(ng-bind-html="trust(currentAgent.aditional_text)")
 			.col.col-md-6
 				img.featured(ng-if="!currentAgent.youtube_iframe_url" ng-src="{{currentAgent.featured_image}}")
 				.youtube(ng-if="currentAgent.youtube_iframe_url")
@@ -60,4 +60,4 @@ block content
 						strong
 							| Fono
 		.row
-			.main-banner
+			banner(second="true")

@@ -56,6 +56,14 @@
         }
     }
 
+    .links{
+        button, a{
+            background: transparent;
+            border: 0;
+            display: inline-block;
+        }
+    }
+
     .related-posts{
         padding: 30 5%;
         background-color: $white;

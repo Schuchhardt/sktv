@@ -28,15 +28,13 @@ block content
 							p.chinese {{post.title}}
 						.img(back-img="{{post.image_url}}")
 			.row.bg-white
-				.main-banner.below
+				banner(second="true")
 			br
 			br
 			.instagram-feed(ng-if="instagram_feed")
 				.row.context-row.cemento-bg
 					p.text-center.chinese.title INSTAGRAM
 				div.feed-html(ng-bind-html="instagram_feed")
-			.row.bg-white.m-b-80
-				.main-banner
 			.last-news.bottom(ng-show="recent_news_2")
 				.row.context-row.cemento-bg
 					p.text-center.chinese.title DESTACADO
@@ -45,5 +43,7 @@ block content
 						.hover-text
 							p.chinese {{post.title}}
 						.img(back-img="{{post.image_url}}")
+			.row.bg-white.m-b-80
+				banner
 			br
 			br

@@ -1,6 +1,6 @@
 export default class MapaCtrl {
   /* @ngInject */
-  constructor($scope, $state, $rootScope, $stateParams, apiService, SETTINGS) {
+  constructor($scope, $state, $rootScope, $stateParams, $sce, apiService, SETTINGS) {
     $rootScope.currentState = $state.current.name;
 
     const allRegions = [
@@ -91,6 +91,10 @@ export default class MapaCtrl {
         $scope.mapURL = 'https://www.google.com/maps/embed/v1/place?key=' + SETTINGS.mapKey + '&q=' + encodeURI(res.skatepark.location);
         $scope.flaitometro = flaitometros[res.skatepark.flaitometro - 1];
       });
+    };
+
+    $scope.trust = function (text) {
+      return $sce.trustAsHtml(text);
     };
 
     $scope.goToRegion = function (reg) {

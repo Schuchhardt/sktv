@@ -4,7 +4,7 @@ angular.module('SKTV', [
   'ngSanitize',
   'ngTouch',
   'ngRaven',
-  'markdown',
+  'ngStorage',
   'ui.router',
   'ui.bootstrap',
   'ui.select',
@@ -29,9 +29,10 @@ angular.module('SKTV', [
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   });
 }])
+
 .config(function($sceDelegateProvider, $compileProvider) {
 
-  $compileProvider.aHrefSanitizationWhitelist(/^\s*(herp|derp):/);
+  $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|mailto|tel|herp|derp):/);
 
   $sceDelegateProvider.resourceUrlWhitelist([
     // Allow same origin resource loads.
@@ -44,13 +45,6 @@ angular.module('SKTV', [
 })
 ;
 
-// angular.module('markdown')
-//   .config(function(markdownProvider) {
-//     markdownProvider.config({
-//       extensions: ['table']
-//     });
-//   });
-
 angular.element(document).ready(() => {
   angular.bootstrap(document, ['SKTV'], {});
 });
@@ -60,10 +54,4 @@ Raven
   .addPlugin(Raven.Plugins.Angular)
   .install();
 
-
-// if ('serviceWorker' in navigator) {
-//   navigator.serviceWorker
-//            .register('/sw.js')
-//            .then(function() { console.log('SW Registered'); });
-// }
 

@@ -24,6 +24,8 @@ export default class GaleriaCtrl {
         $scope.eventPhotos.push(response.photos);
         $scope.eventPhotos = _.uniq(_.flatten($scope.eventPhotos));
         if (response.photos.length === 0) $scope.thereIsMorePhotos = false;
+        $scope.currentEvent.all_photos.push(response.photos);
+        $scope.currentEvent.all_photos = _.uniq(_.flatten($scope.currentEvent.all_photos));
       });
     };
 
@@ -46,7 +48,8 @@ export default class GaleriaCtrl {
       return $sce.trustAsHtml(text);
     };
 
-    $scope.showSlider = (photo) => {
+    $scope.showSlider = (photo, offseted) => {
+      $scope.currentEvent.offseted = offseted || false;
       $uibModal.open({
         animation: false,
         templateUrl: 'sliderPhotos',

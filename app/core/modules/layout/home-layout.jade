@@ -35,7 +35,7 @@ div(id="layout" ng-init="showNavbar = false" ng-controller="LayoutController")
 			ul.nav.navbar-nav.pull-left(ng-init="showSearch = false")
 				li.search-bar
 					span.clickable.icon.icon-search(ng-click="showSearch = !showSearch")
-					div(angucomplete-alt ng-show="showSearch"
+					div.search-autocomplete(angucomplete-alt ng-class="{'invs': !showSearch}"
 						placeholder="Buscador"
 						pause="500"
 						selected-object="searchResult"
@@ -77,4 +77,8 @@ div(id="layout" ng-init="showNavbar = false" ng-controller="LayoutController")
 					span.icon-youtube
 				a( href="https://www.instagram.com/sktvchile/" target="_system")
 					span.icon-instagram
-			p.margin-0.white.book.uppercased.text-center SKTV &copy; 2018 | Todos los derechos reservados.
+			p.margin-0.white.book.uppercased.text-center
+				| SKTV &copy; 2018 
+			form.form-inline(ng-submit="subscribe(userEmail, subscriberForm)" name="subscriberForm")
+				input.form-control(type="email" ng-model="userEmail" placeholder="Correo" required)
+				button.btn.btn-primary(type="submit" uib-popover="Gracias por Suscribirte!" popover-is-open="popoverIsOpen" ng-click="popoverIsOpen = !popoverIsOpen") Suscribirse

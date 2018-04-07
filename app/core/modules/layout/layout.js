@@ -1,12 +1,9 @@
 export default class LayoutCtrl {
   /* @ngInject */
-  constructor($scope, $state, $rootScope, SETTINGS) {
+  constructor($scope, $state, $rootScope, apiService, SETTINGS) {
     $rootScope.currentState = $state.current.name;
     $scope.searchUrl = SETTINGS.apiURL + '/search';
-
-    $scope.remoteUrlRequestFn = function(str) {
-      return {q: str};
-    };
+    $scope.userEmail = "";
 
     const goToResult = function (result) {
       let state = "home";
@@ -30,6 +27,17 @@ export default class LayoutCtrl {
         break;
       }
       $state.go(state, stateParams);
+    };
+
+    $scope.remoteUrlRequestFn = function(str) {
+      return {q: str};
+    };
+
+    $scope.subscribe = function (userEmail, form) {
+      apiService.subscribe(userEmail).then(function () {
+        $scope.userEmail = "";
+        form.$setPristine();
+      });
     };
 
     $scope.$watch('searchResult', function (newValue) {

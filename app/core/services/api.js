@@ -60,6 +60,14 @@ export default ["$http", "SETTINGS",
           return response.data;
         });
       },
+      loadBanners: () => {
+        return $http({
+          method: 'GET',
+          url: SETTINGS.apiURL + '/banners'
+        }).then(function(response) {
+          return response.data;
+        });
+      },
       loadAgents: (agentType) => {
         return $http({
           method: 'GET',
@@ -96,6 +104,15 @@ export default ["$http", "SETTINGS",
         return $http({
           method: 'GET',
           url: SETTINGS.apiURL + '/skateparks/' + skateparkId
+        }).then(function(response) {
+          return response.data;
+        });
+      },
+      subscribe: (userEmail) => {
+        return $http({
+          method: 'POST',
+          url: SETTINGS.apiURL + '/subscribe/',
+          data: {email: userEmail}
         }).then(function(response) {
           return response.data;
         });

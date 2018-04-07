@@ -2,9 +2,7 @@ extends ../layout/home-layout
 block content
 	#galeria
 		.row
-			.main-banner
-		//- .title-badge
-		//- 	p.chinese Galeria fotográfica
+			banner
 		.row.context-row.cemento-bg
 			p.text-center.chinese.uppercased Galeria fotográfica
 		br
@@ -17,5 +15,5 @@ block content
 				p.date.indie 
 					small {{event.release_date | date:"dd/MM/yyyy"}}
 		.row
-			.main-banner
+			banner(second="true")
 

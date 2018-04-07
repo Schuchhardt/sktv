@@ -2,7 +2,7 @@ extends ../layout/home-layout
 block content
 	#post
 		.row
-			.main-banner
+			banner
 		br
 		br
 		br
@@ -16,10 +16,19 @@ block content
 				iframe(ng-src="{{currentPost.youtube_iframe_url}}" frameborder="0" scrolling="no" allowfullscreen)
 			p.text(ng-bind-html="trust(currentPost.text)")
 			p.text(ng-bind-html="trust(currentPost.second_text)")
+			p.text-center.links
+				button(ng-click="copyLinkToClipboard()" popover-append-to-body="true" popover-placement="top" popover-trigger="mouseenter" uib-popover="{{clipboardText}}")
+					span.icon.icon-clipboard
+				button(ng-click="postToFb()" popover-append-to-body="true" popover-placement="top" popover-trigger="mouseenter" uib-popover="Compartir por Facebook")
+					span.icon.icon-facebook
+				button(ng-click="postToTwitter()" popover-append-to-body="true" popover-placement="top" popover-trigger="mouseenter" uib-popover="Compartir por Twitter")
+					span.icon.icon-twitter
+				a(ng-href="https://api.whatsapp.com/send?text={{currentUrl}}" popover-append-to-body="true" popover-placement="top" popover-trigger="mouseenter" uib-popover="Compartir por Whatsapp" target="_blank")
+					span.icon.icon-whatsapp
 			.map_url(ng-if="currentPost.place")
 				iframe(ng-src="{{mapURL}}")
 		.row
-			.main-banner
+			banner(second="true")
 		.row.cemento-bg
 			p.text-center.chinese.title RECOMENDADOS
 		.related-posts(ng-show="relatedPosts")

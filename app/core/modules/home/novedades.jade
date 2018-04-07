@@ -1,7 +1,8 @@
 extends ../layout/home-layout
 block content
 	#novedades
-		.row.main-banner
+		.row
+			banner
 		.row.cemento-bg
 			p.text-center.chinese.title NOVEDADES
 		br
@@ -17,4 +18,5 @@ block content
 					p.indie.see-more
 						small
 							| Ver más...
-		.row.main-banner
+		.row
+			banner(second="true")

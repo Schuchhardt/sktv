@@ -43,6 +43,14 @@
                         margin-left: 12px;
                         width: 270px;
                     }
+                    .search-autocomplete{
+                        transition: all 0.5s linear;
+                        opacity: 1;
+                        &.invs{
+                            transform: translateX(365px);
+                            opacity: 0;
+                        }
+                    }
                 }
 
             }
@@ -220,6 +228,22 @@ span.icon{
         left: -10px;
         z-index: 10;
     }
+
+    &.icon-clipboard{
+        background-image: url("../images/icon-clipboard.png");
+    }
+
+    &.icon-whatsapp{
+        background-image: url("../images/icon-whatsapp.png");
+    }
+
+    &.icon-facebook{
+        background-image: url("../images/icon-facebook.png");
+    }
+
+    &.icon-twitter{
+        background-image: url("../images/icon-twitter.png");
+    }
 }
 
 
@@ -238,12 +262,19 @@ span.icon{
         right: 10px;
     }
     p{
+        display: inline-block;
         font-family: 'Fjalla One';
         font-size: 20px;
         margin-top: 10px;
         @media(max-width: 450px){
             font-size: 15px;
         }
+    }
+    form{
+        display: inline-block;
+        position: relative;
+        top: -5px;
+        left: 20px;
     }
 }
 

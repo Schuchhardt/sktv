@@ -1,6 +1,6 @@
 export default class HomeCtrl {
   /* @ngInject */
-  constructor($scope, $state, $rootScope, apiService, $sce) {
+  constructor($scope, $state, $rootScope, $sce, $localStorage, apiService) {
     $rootScope.currentState = $state.current.name;
 
     const loadRecentNews = () => {
@@ -15,6 +15,11 @@ export default class HomeCtrl {
             $scope.instagram_feed = $sce.trustAsHtml(res.html);
           });
         }
+        apiService.loadBanners().then((res) => {
+          $scope.$storage = $localStorage;
+          $scope.$storage.main_banner = res.banners[0];
+          $scope.$storage.second_banner = res.banners[1];
+        });
       });
     };
 

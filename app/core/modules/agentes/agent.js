@@ -1,6 +1,6 @@
 export default class AgentCtrl {
   /* @ngInject */
-  constructor($scope, $state, $rootScope, $stateParams, apiService, $uibModal) {
+  constructor($scope, $state, $rootScope, $stateParams, apiService, $uibModal, $sce) {
     $rootScope.currentState = $state.current.name;
     $scope.agentType = $stateParams.agentType;
 
@@ -34,6 +34,10 @@ export default class AgentCtrl {
           }
         }
       });
+    };
+
+    $scope.trust = function (text) {
+      return $sce.trustAsHtml(text);
     };
 
     if ($state.current.name === 'agentes-list') {
