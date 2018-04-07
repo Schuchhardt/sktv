@@ -1,4 +1,4 @@
-export default ($localStorage, $sce) => {
+export default ["$localStorage", "$sce", ($localStorage, $sce) => {
   return {
     restrict: 'E',
     template: '<a ng-href="{{link}}" target="_blank"><div class="main-banner" ng-if="img" ng-style="{\'background-image\': \'url(\' + img + \')\'}"></div></a>',
@@ -11,4 +11,4 @@ export default ($localStorage, $sce) => {
       scope.img = main.image_url;
     }
   };
-};
+}];
