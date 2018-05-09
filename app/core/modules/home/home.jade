@@ -4,8 +4,13 @@ block content
 		.row.cemento-bg
 			.main-hero
 				.main-banner
-					iframe.adidas-banner(src="https://ad.doubleclick.net/ddm/adi/N6311.3203393SKTV/B20708726.215105576;sz=1280x140;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" bordercolor='#000000')
-
+					iframe(src="https://ad.doubleclick.net/ddm/adi/N6311.3203393SKTV/B21091028.220643241;sz=900x100;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?")
+					script(src="https://ad.doubleclick.net/ddm/adj/N6311.3203393SKTV/B21091028.220643241;abr=!ie;sz=900x100;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?")
+					//- ins(class='dcmads' style='display:inline-block;width:900px;height:100px'
+					//- 	data-dcm-placement='N6311.3203393SKTV/B21091028.220643241'
+					//- 	data-dcm-rendering-mode='script')
+					//- 	script(src='https://www.googletagservices.com/dcm/dcmads.js')
+					//- iframe.adidas-banner(src="https://ad.doubleclick.net/ddm/adi/N6311.3203393SKTV/B20708726.215105576;sz=1280x140;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" bordercolor='#000000')
 				.featured-container(ng-if="featured" )
 					.col.col-md-6.col-md-offset-3
 						.img(back-img="{{featured.image_url}}" ui-sref="post({postId: featured.id})").clickable
