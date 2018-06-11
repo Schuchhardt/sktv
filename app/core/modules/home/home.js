@@ -21,7 +21,7 @@ export default class HomeCtrl {
         apiService.loadBanners().then((res) => {
           $scope.$storage = $localStorage;
           $scope.$storage.main_banner = res.banners[0];
-          $scope.$storage.second_banner = res.banners[1];
+          $scope.$storage.second_banner = res.banners[1] ? res.banners[1] : res.banners[0];
         });
       });
     };

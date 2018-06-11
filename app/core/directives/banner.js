@@ -7,8 +7,10 @@ export default ["$localStorage", "$sce", ($localStorage, $sce) => {
     },
     link: function(scope) {
       const main = (scope.second) ? $localStorage.second_banner : $localStorage.main_banner;
-      scope.link = $sce.trustAsResourceUrl(main.link);
-      scope.img = main.image_url;
+      if (main) {
+        scope.link = $sce.trustAsResourceUrl(main.link);
+        scope.img = main.image_url;
+      }
     }
   };
 }];
