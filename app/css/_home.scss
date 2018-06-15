@@ -4,6 +4,11 @@
     height: 100%;
     top: 5px;
     z-index: 9;
+    .cemento-bg{
+        margin: 0 -15px;
+        height: 100%;
+        border-radius: 0;
+    }
    .main-hero{
         height: 600px;
         background-image: url("../images/sktv/bg.gif");
@@ -14,12 +19,7 @@
         margin-left: -2%;
         .main-banner{
             background-position: right;
-            // position: relative;
-            // top: 20px;
-            // height: 100px;
-            // @media(min-width: 450px){
-            //     margin: 0px 16%;
-            // }
+            margin: 10px 5%;
         }
         .featured-container{
             background: rgba(255, 255, 255, 0.3803921568627451);
@@ -83,7 +83,7 @@
    }
    .instagram-feed{
         margin-top: -40px;
-        padding: 30px 15%;
+        padding: 30px 10%;
         background-color: $white;
         .feed-html{
             height: 140%;
@@ -165,6 +165,7 @@
         }
    }
     .context-row{
+        border-radius: 5px;
         margin-bottom: 30px;
         position: relative;
         top: 10px;
@@ -179,7 +180,7 @@
     }
    .last-news{
         margin-top: 0px;
-        padding: 30 15%;
+        padding: 30px 10%;
         background-color: $white;
 
         @media(max-width: 450px){
