@@ -4,31 +4,25 @@ block content
 		.row.cemento-bg
 			.main-hero
 				.main-banner
-					iframe(src="https://ad.doubleclick.net/ddm/adi/N6311.3203393SKTV/B21091028.220643241;sz=900x100;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?")
-					script(src="https://ad.doubleclick.net/ddm/adj/N6311.3203393SKTV/B21091028.220643241;abr=!ie;sz=900x100;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?")
-					//- ins(class='dcmads' style='display:inline-block;width:900px;height:100px'
-					//- 	data-dcm-placement='N6311.3203393SKTV/B21091028.220643241'
-					//- 	data-dcm-rendering-mode='script')
-					//- 	script(src='https://www.googletagservices.com/dcm/dcmads.js')
-					//- iframe.adidas-banner(src="https://ad.doubleclick.net/ddm/adi/N6311.3203393SKTV/B20708726.215105576;sz=1280x140;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" bordercolor='#000000')
-				.featured-container(ng-if="featured" )
+					banner(agency="true")
+				.featured-container(ng-if="cover" )
 					.col.col-md-6.col-md-offset-3
-						.img(back-img="{{featured.image_url}}" ui-sref="post({postId: featured.id})").clickable
+						.img(back-img="{{cover.image_url}}" ui-sref="post({postId: cover.id})").clickable
 						.caption
 							.title
-								h2.chinese {{featured.title}}
-								h3.chinese {{featured.subtitle}}
+								h2.chinese {{cover.title}}
+								h3.chinese {{cover.subtitle}}
 								.share-links
 									span
 										i.
 							.detail
-								p.chinese {{featured.intro}}
-								a.indie(ui-sref="post({postId: featured.id})") Ver más
-			.last-news(ng-show="recent_news_1")
+								p.chinese {{cover.intro}}
+								a.indie(ui-sref="post({postId: cover.id})") Ver más
+			.last-news(ng-show="recent_news")
 				.row.context-row.cemento-bg
 					p.text-center.chinese.title LO ÚLTIMO
 				.row.content-row
-					.col.col-md-4.clickable(ng-repeat="post in recent_news_1 | orderBy:'-created_at'" ui-sref="post({postId: post.id})")
+					.col.col-md-4.clickable(ng-repeat="post in recent_news | orderBy:'-created_at' | limitTo: 3" ui-sref="post({postId: post.id})")
 						.hover-text
 							p.chinese {{post.title}}
 						.img(back-img="{{post.image_url}}")
@@ -40,11 +34,11 @@ block content
 				.row.context-row.cemento-bg
 					p.text-center.chinese.title INSTAGRAM
 				div.feed-html(ng-bind-html="instagram_feed")
-			.last-news.bottom(ng-show="recent_news_2")
+			.last-news.bottom(ng-show="featured")
 				.row.context-row.cemento-bg
 					p.text-center.chinese.title DESTACADO
 				.row
-					.col.col-md-4.clickable(ng-repeat="post in recent_news_2 | orderBy:'-created_at'" ui-sref="post({postId: post.id})")
+					.col.col-md-4.clickable(ng-repeat="post in featured | orderBy:'-created_at' | limitTo: 3" ui-sref="post({postId: post.id})")
 						.hover-text
 							p.chinese {{post.title}}
 						.img(back-img="{{post.image_url}}")

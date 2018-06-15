@@ -13,12 +13,13 @@
         margin-left: 0%;
         margin-left: -2%;
         .main-banner{
-            position: relative;
-            top: 20px;
-            height: 100px;
-            @media(min-width: 450px){
-                margin: 0px 16%;
-            }
+            background-position: right;
+            // position: relative;
+            // top: 20px;
+            // height: 100px;
+            // @media(min-width: 450px){
+            //     margin: 0px 16%;
+            // }
         }
         .featured-container{
             background: rgba(255, 255, 255, 0.3803921568627451);

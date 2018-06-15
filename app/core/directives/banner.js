@@ -4,12 +4,22 @@ export default ["$localStorage", "$sce", ($localStorage, $sce) => {
     template: '<a ng-href="{{link}}" target="_blank"><div class="main-banner" ng-if="img" ng-style="{\'background-image\': \'url(\' + img + \')\'}"></div></a>',
     scope: {
       second: "=?",
+      agency: "=?",
     },
     link: function(scope) {
-      const main = (scope.second) ? $localStorage.second_banner : $localStorage.main_banner;
-      if (main) {
-        scope.link = $sce.trustAsResourceUrl(main.link);
-        scope.img = main.image_url;
+      let banner;
+      if (scope.agency) {
+        banner = $localStorage.agency_banner;
+      } else {
+        if (scope.second) {
+          banner = $localStorage.second_banner;
+        } else {
+          banner = $localStorage.main_banner;
+        }
+      }
+      if (banner) {
+        scope.link = $sce.trustAsResourceUrl(banner.link);
+        scope.img = banner.image_url;
       }
     }
   };

@@ -295,13 +295,12 @@ span.icon{
 
 .main-banner{
     height: 100px;
-    background: lightgray;
+    // background: lightgray;
     margin: 10px 10%;
     border-radius: 5px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    // background-image: url("https://i.imgur.com/hf96O8l.jpg");
     &.below{
         background-image: url("https://i.imgur.com/zGxrNFB.png");
     }
