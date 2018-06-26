@@ -10,22 +10,22 @@ block content
 		.row.detail
 			.col-md-12
 				img.profile(ng-src="{{currentAgent.photo_url}}")
-				p.quote.text-center
+				h2.indie.quote.text-center
 					i {{currentAgent.quote}}
-				p.text-left(ng-bind-html="trust(currentAgent.text)")
+				p.text.text-justify(ng-bind-html="trust(currentAgent.text)")
 		.row.detail
 			.col.col-md-6
-				p.text-right(ng-bind-html="trust(currentAgent.aditional_text)")
+				p.text.text-justify(ng-bind-html="trust(currentAgent.aditional_text)")
 			.col.col-md-6
 				img.featured(ng-if="!currentAgent.youtube_iframe_url" ng-src="{{currentAgent.featured_image}}")
 				.youtube(ng-if="currentAgent.youtube_iframe_url")
 					iframe(ng-src="{{currentAgent.youtube_iframe_url}}" frameborder="0" scrolling="no" allowfullscreen)
 			br
 		.row.container-fixed.detail
-			.col-md-12
+			.col.col-md-12
 				img.featured(ng-src="{{currentAgentPhoto.featured_image}}")
 		.row.container-fixed.images
-			.col.col-md-3.clickable(ng-repeat="photo in currentAgentPhotos" ng-click="showSlider(photo)")
+			.col.col-sm-6.col-md-3.clickable(ng-repeat="photo in currentAgentPhotos" ng-click="showSlider(photo)")
 				.img(back-img="{{photo.photo_url}}")
 		.row
 			script(type="text/ng-template", id="sliderPhotos")

@@ -13,9 +13,11 @@
         margin: 0 10%;
         font-weight: 400;
     }
+    
     h2{
         font-weight: 400;
     }
+
     img{
         width: 100%;
         &.featured{
@@ -24,6 +26,12 @@
             margin: auto;
         }
     }
+
+    p.text{
+        font-family: 'Fjalla One';
+        margin: 0 15%;
+    }
+
     .feat-slider{
         padding: 0 13%;
         position: relative;
@@ -35,6 +43,7 @@
         margin-top: 10px;
         &.text{
             font-size: 20px;
+            font-family: 'Fjalla One';
         }
     }
     .name{

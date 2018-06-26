@@ -155,8 +155,8 @@ iframe{
     background-color: transparent;
     background-size: contain;
     background-position: center;
-    top: 20px;
-    right: 30px;
+    top: 15px;
+    right: 45px;
     height: 40px;
     width: 40px;
     border: 0;
@@ -296,7 +296,8 @@ span.icon{
 .main-banner{
     height: 100px;
     // background: lightgray;
-    margin: 10px 10%;
+    // margin: 10px 10%;
+    margin: 15px 0;
     border-radius: 5px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -333,7 +334,7 @@ span.icon{
     background-repeat: no-repeat;
     background-position: left;
     height: 45px;
-    margin: 10px 80px;
+    margin: 10px -15px;
     border-radius: 5px;
     p.title{
         color: $white;

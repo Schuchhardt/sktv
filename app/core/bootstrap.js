@@ -15,6 +15,7 @@ angular.module('SKTV', [
   require('./controllers').name,
   require('./directives').name,
   require('./services').name,
+  require('./filters').name,
 ])
 
 .constant('SETTINGS', {

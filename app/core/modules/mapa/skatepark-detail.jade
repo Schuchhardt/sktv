@@ -1,6 +1,6 @@
 extends ../layout/home-layout
 block content
-	#agentes
+	#mapa
 		.row
 			banner
 		.row.context-row.cemento-bg
@@ -8,13 +8,13 @@ block content
 		br
 		.row.detail(ng-if="currentSkatepark")
 			.col-md-12
-				h2.chinese.text-center {{currentSkatepark.name}}
-				h3.chinese.text-center {{currentRegion.name}}
+				h2.indie.text-center {{currentSkatepark.name}}
+				h3.indie.text-center {{currentRegion.name}}
 				br
 				.img.profile(back-img="{{currentSkatepark.image_url}}")
 				br
-				p.text-center.no-margin {{currentSkatepark.caption}}
-				p.text-center.text(ng-bind-html="trust(currentSkatepark.commment)")
+				p.text-justify.no-margin {{currentSkatepark.caption}}
+				p.text-justify.text(ng-bind-html="trust(currentSkatepark.commment)")
 		.row.container-fixed.detail
 			.col-md-6(ng-repeat="img in featuredImages")
 				img.featured(ng-src="{{img.photo_url}}")
@@ -28,10 +28,10 @@ block content
 				include ../galeria/slider-photos
 		.row
 			.col.col-md-12
-				p.text-center.text(ng-bind-html="trust(currentSkatepark.aditional_text)")
+				p.text-justify.text(ng-bind-html="trust(currentSkatepark.aditional_text)")
 		.row(ng-show="currentSkatepark.flaitometro")
 			.flaitometro
-				h4.text-center Flaitómetro
+				h4.indie.text-center Flaitómetro
 				img(ng-src="{{flaitometro}}")
 				p.no-margin.text-center.text(ng-bind-html="trust(currentSkatepark.flaitometro_text)")
 		.row

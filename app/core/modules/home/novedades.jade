@@ -14,7 +14,7 @@ block content
 						| {{post.title}}
 					p.indie
 						| {{post.subtitle}}
-					p(ng-bind-html="trust(currentPost.text)")
+					p.text(ng-bind-html="trust(post.text) | truncate: 100")
 					p.indie.see-more
 						small
 							| Ver más...

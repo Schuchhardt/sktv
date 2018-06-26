@@ -3,18 +3,18 @@ block content
 	#post
 		.row
 			banner
-		br
-		br
+		.row.cemento-bg
+			p.text-center.chinese.title NOVEDADES
 		br
 		.row
-			h1.indie {{currentPost.title}}
-			h3.indie {{currentPost.subtitle}}
+			h1.indie.text-center {{currentPost.title}}
+			h3.indie.text-center {{currentPost.subtitle}}
 			h2.indie {{currentPost.release_date | date: "dd/MM/yyyy"}}
 		.row.container-fixed(ng-if="currentPost")
 			.img(ng-if="currentPost.image_url" back-img="{{currentPost.image_url}}")
+			p.text(ng-bind-html="trust(currentPost.text)")
 			.youtube(ng-if="currentPost.youtube_iframe_url")
 				iframe(ng-src="{{currentPost.youtube_iframe_url}}" frameborder="0" scrolling="no" allowfullscreen)
-			p.text(ng-bind-html="trust(currentPost.text)")
 			p.text(ng-bind-html="trust(currentPost.second_text)")
 			p.text-center.links
 				button(ng-click="copyLinkToClipboard()" popover-append-to-body="true" popover-placement="top" popover-trigger="mouseenter" uib-popover="{{clipboardText}}")
