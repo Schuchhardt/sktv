@@ -11,18 +11,29 @@
     }
    .main-hero{
         height: 600px;
-        background-image: url("../images/sktv/bg.gif");
-        background-size: cover;
-        background-repeat: no-repeat;
+        // background-image: url("../images/sktv/bg.gif");
+        // background-size: cover;
+        // background-repeat: no-repeat;
         width: 104%;
         margin-left: 0%;
         margin-left: -2%;
+        video{
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 0;
+            position: absolute;
+            display: block;
+        }
         .main-banner{
             background-position: right;
             margin: 0px 5%;
             padding-top: 20px;
+            position: relative;
         }
         .featured-container{
+            position: relative;
             background: rgba(255, 255, 255, 0.3803921568627451);
             margin-top: 40px;
             height: 500px;
