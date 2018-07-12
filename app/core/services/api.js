@@ -108,6 +108,14 @@ export default ["$http", "SETTINGS",
           return response.data;
         });
       },
+      loadSktvAbout: () => {
+        return $http({
+          method: 'GET',
+          url: SETTINGS.apiURL + '/about'
+        }).then(function(response) {
+          return response.data;
+        });
+      },
       subscribe: (userEmail) => {
         return $http({
           method: 'POST',

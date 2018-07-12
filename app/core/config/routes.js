@@ -58,7 +58,7 @@ export default [ "$stateProvider", "$urlRouterProvider", ($stateProvider, $urlRo
     })
     .state('about', {
       url: '/about',
-      controller: 'HomeCtrl',
+      controller: 'AboutCtrl',
       template: require('../modules/home/about.jade'),
     })
     ;

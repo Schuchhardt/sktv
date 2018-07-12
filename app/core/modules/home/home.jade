@@ -3,7 +3,7 @@ block content
 	.container.bg-white(id="home")
 		.row.cemento-bg
 			.main-hero
-				video(autoplay muted loop)
+				video(autoplay muted loop ng-if="isDesktop")
 					source(src="../../images/sktv/bg.mp4" type="video/mp4")
 				.main-banner
 					banner(agency="true")

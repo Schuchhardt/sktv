@@ -24,7 +24,7 @@ block content
 		.row.container-fixed.detail
 			.col.col-md-12
 				img.featured(ng-src="{{currentAgentPhoto.featured_image}}")
-		.row.container-fixed.images
+		.row.container-fixed.images(ng-show="currentAgentPhotos && currentAgentPhotos.length > 0")
 			.col.col-sm-6.col-md-3.clickable(ng-repeat="photo in currentAgentPhotos" ng-click="showSlider(photo)")
 				.img(back-img="{{photo.photo_url}}")
 		.row
@@ -58,6 +58,6 @@ block content
 					a(ng-href="tel:{{currentAgent.phone}}")
 						span.icon.icon-phone
 						strong
-							| Fono
+							| WhatsApp
 		.row
 			banner(second="true")

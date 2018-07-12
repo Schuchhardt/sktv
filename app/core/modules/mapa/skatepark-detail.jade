@@ -13,7 +13,7 @@ block content
 				br
 				.img.profile(back-img="{{currentSkatepark.image_url}}")
 				br
-				p.text-justify.no-margin {{currentSkatepark.caption}}
+				p.text-justify.no-margin.caption {{currentSkatepark.caption}}
 				p.text-justify.text(ng-bind-html="trust(currentSkatepark.commment)")
 		.row.container-fixed.detail
 			.col-md-6(ng-repeat="img in featuredImages")

@@ -1,8 +1,16 @@
 export default class HomeCtrl {
   /* @ngInject */
-  constructor($scope, $state, $rootScope, $sce, $localStorage, apiService) {
+  constructor($scope, $state, $rootScope, $sce, $localStorage, $document, apiService) {
     $rootScope.currentState = $state.current.name;
     $scope.iframeLoaded = false;
+    $scope.isDesktop = false;
+
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    console.log(w);
+    if (w > 450) {
+      $scope.isDesktop = true;
+    }
+
     const loadRecentNews = () => {
       apiService.loadRecentNews().then((response) => {
         $scope.cover = response.cover;

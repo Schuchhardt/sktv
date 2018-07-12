@@ -1,5 +1,6 @@
 export default angular.module('SKTV.controllers', [])
     .controller('HomeCtrl', require('./modules/home/home'))
+    .controller('AboutCtrl', require('./modules/home/about'))
     .controller('LayoutController', require('./modules/layout/layout'))
     .controller('MapaCtrl', require('./modules/mapa/mapa'))
     .controller('GaleriaCtrl', require('./modules/galeria/galeria'))

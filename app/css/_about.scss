@@ -19,4 +19,26 @@
     		margin-top: 0px;
     	}
     }
+    .youtube{
+        padding: 0 20%;
+        margin-bottom: 30px;
+    }
+
+    .feat-slider{
+        padding: 30px 5%;
+        position: relative;
+        top: -30px;
+        .simple{
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .img{
+        height: 200px;
+        width: 100%;
+        background: whitesmoke;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
 }
