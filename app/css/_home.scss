@@ -14,9 +14,10 @@
         // background-image: url("../images/sktv/bg.gif");
         // background-size: cover;
         // background-repeat: no-repeat;
-        width: 104%;
-        margin-left: 0%;
-        margin-left: -2%;
+        width: 100%;
+        // margin-left: 0%;
+        // margin-left: -2%;
+        max-width: 100vw;
         video{
             right: 0;
             bottom: 0;
@@ -25,6 +26,9 @@
             z-index: 0;
             position: absolute;
             display: block;
+            @media(max-width: 450px){
+                display: none;
+            }
         }
         .main-banner{
             background-position: right;
@@ -37,6 +41,7 @@
             background: rgba(255, 255, 255, 0.3803921568627451);
             margin-top: 40px;
             height: 500px;
+            max-width: 100vw;
             .col{
                 padding: 0;
                 background-color: white;
@@ -236,6 +241,7 @@
    }
    .banner-bottom{
         padding: 20px 10%;
+        margin: 0;
    }
 }
 

@@ -23,7 +23,7 @@ block content
 			.simple.col.col-md-2.clickable(ng-repeat="photo in eventFeaturedPhotos" ng-click="showSlider(photo)")
 				.img(back-img="{{photo.photo_url}}")
 		.row
-			p.text-justify(ng-bind-html="trust(currentEvent.text)")
+			p.text.text-justify(ng-bind-html="trust(currentEvent.text)")
 		.row.masonry
 			.brick.clickable(ng-repeat="photo in eventPhotos" ng-click="showSlider(photo, true)")
 				img(src="{{photo.photo_url}}")

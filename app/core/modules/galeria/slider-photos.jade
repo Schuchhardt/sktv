@@ -6,3 +6,4 @@
 			ul(rn-carousel class="image" rn-carousel-controls rn-carousel-index="currentSlide" rn-carousel-controls-allow-loop)
 				li(ng-repeat="photo in currentEvent.all_photos" )
 					div.slider-img(back-img="{{photo.photo_url}}")
+					button.pull-right.download.indie(ng-click="download(photo)") Descargar
